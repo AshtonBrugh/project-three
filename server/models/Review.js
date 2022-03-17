@@ -3,19 +3,16 @@ const productSchema = require('./Product');
 
 const reviewSchema = new Schema(
     {
-        subject: {
-            type: String,
-            require: 'Please provide a title for you product',
-            minlength: 1,
-            maxlength: 35
-        },
         content: {
             type: String,
             required: 'Please provide a description for your product',
             minlength: 1,
             maxlength: 280
         },
-        product: [productSchema],
+        username: {
+            type: String,
+            required: true
+        },
 
     },
     {

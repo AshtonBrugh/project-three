@@ -1,6 +1,7 @@
 const { User } = require('../models/index');
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
+const Product = require('../models/Product');
 
 const resolvers = {
     Query: {
@@ -17,6 +18,13 @@ const resolvers = {
         },
         user: async (parent, { username }) => {
             return User.findOne({ username });
+        },
+        product: async (parent, { _id }) => {
+            return Product.findOne({ _id })
+        },
+        products: async (parent, { username }) => {
+            const params = username ? { username } : {};
+            return Product.find(params);
         }
     },
     Mutation: {
@@ -42,7 +50,35 @@ const resolvers = {
 
             const token = signToken(user);
             return { token, user };
-        }
+        },
+        addProduct: async (parent, args, context) => {
+            if (context.user) {
+                const product = await Product.create({ ...args, username: context.user.username });
+
+                await User.findByIdAndUpdate(
+                    { _id: context.user._id },
+                    { $push: { products: product._id } },
+                    { new: true }
+                );
+
+                return product;
+            }
+
+            throw new AuthenticationError('You need to be logged in!');
+        },
+        addReview: async (parent, { productId, content }, context) => {
+            if (context.user) {
+                const updateProduct = await Product.findOneAndUpdate(
+                    { _id: productId },
+                    { $push: { reviews: { content, username: context.user.username } } },
+                    { new: true, runValidators: true }
+                );
+
+                return updateProduct;
+            }
+
+            throw new AuthenticationError('You need to be logged in!');
+        },
     }
 };
 
