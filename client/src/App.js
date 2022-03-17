@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import RegisterLogin from './pages/RegisterLogin'
+import ReviewForm from './components/ReviewForm/reviewForm';
 
 const httpLink = createHttpLink({
     uri: '/graphql'
@@ -15,18 +16,14 @@ const client = new ApolloClient({
 
 
 function App() {
-    return (
-        <ApolloProvider client={client}>
-            <Router>
-                <Routes>
-                    <Route exact path='/' component={Login} />
-                    <Route exact path='/saved' component={Signup} />
-                    <Route render={() => <h1 className='display-2'>Wrong page!</h1>} />
-                </Routes>
-                <RegisterLogin />
-            </Router>
-        </ApolloProvider>
-    );
+  return (
+    <ApolloProvider client={client}>
+      <div className="App">
+        <Signup />
+        <Login />
+      </div>
+    </ApolloProvider>
+  );
 }
 
 export default App;
