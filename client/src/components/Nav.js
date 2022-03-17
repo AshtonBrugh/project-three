@@ -1,14 +1,13 @@
 import React from "react";
+import AuthService from '../utils/auth'
 
-function Nav() {
-
-    const handlePageChange = (pageName) => {
-
-    }
+function Nav({ currentPage, handlePageChange }) {
 
     return (
         <header className="nav-block gradient-text">
-            <h1 className="heading">FiveFires</h1>
+            <a href="#home" onClick={() => handlePageChange('home')} className='nav-item'>
+                <h1 className="gradient-text heading">FiveFires</h1>
+            </a>
             <nav>
                 <ul className="nav">
                     <li>
@@ -21,7 +20,20 @@ function Nav() {
                         <a href="#post-listing" onClick={() => handlePageChange('post')} className='nav-item'>Post Listing</a>
                     </li>
                     <li>
-                        <a href="#logout" onClick={() => handlePageChange('logout')} className='nav-item'>Logout</a>
+                        {
+                            AuthService.checkLogin() ?
+                                (
+                                    <a href="#logout" onClick={() => {
+                                        AuthService.logout();
+                                        handlePageChange('home');
+                                    }} className='nav-item'>Logout</a>
+                                )
+                                :
+                                (
+                                    <a href="#login" onClick={() => handlePageChange('login')} className='nav-item'>Log in</a>
+                                )
+
+                        }
                     </li>
                 </ul>
             </nav>
