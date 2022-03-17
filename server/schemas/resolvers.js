@@ -51,7 +51,7 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
         },
-        addThought: async (parent, args, context) => {
+        addProduct: async (parent, args, context) => {
             if (context.user) {
                 const product = await Product.create({ ...args, username: context.user.username });
 
