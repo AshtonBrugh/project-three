@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import RegisterLogin from './pages/RegisterLogin'
+import Nav from './pages/Nav'
 
 const httpLink = createHttpLink({
     uri: '/graphql'
@@ -23,6 +24,7 @@ function App() {
                     <Route exact path='/saved' component={Signup} />
                     <Route render={() => <h1 className='display-2'>Wrong page!</h1>} />
                 </Routes>
+                <Nav />
                 <RegisterLogin />
             </Router>
         </ApolloProvider>

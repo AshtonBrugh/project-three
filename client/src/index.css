@@ -35,3 +35,37 @@ code {
 .border-blue {
     border: 1px solid blue;
 }
+
+.gradient-text {
+  background-image: linear-gradient(180deg, #E21143, #FFB03A);
+  background-clip: text;
+  color: transparent;
+}
+
+.heading {
+  font-size: 5vw;
+}
+
+.nav-item {
+  text-decoration: none;
+  font-size: 1.8vw;
+  color: black;
+}
+
+.nav-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 1.5vw 0 1.5vw;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+  font-style: none;
+}
+
+nav ul li {
+  padding-right: 5vw;
+  
+}
