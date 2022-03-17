@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import auth from "../utils/auth";
+import AuthService from "../utils/auth";
 
 import Header from "./header";
 import Footer from './footer';
@@ -53,7 +53,7 @@ export default function PageContainer() {
                 </>
             </Router>
             <span>
-                Logged In: {auth.loggedIn().toString()}
+                Logged In: {AuthService.loggedIn().toString()}
             </span>
             {renderPage()}
         </>
