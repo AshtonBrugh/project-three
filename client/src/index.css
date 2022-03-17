@@ -1,3 +1,5 @@
+/* General Styling Start */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -12,6 +14,9 @@ code {
     monospace;
 }
 
+/* General Styling End */
+
+/* Login/Signup Styling Start */
 
 .container {
     display: flex;
@@ -36,6 +41,10 @@ code {
     border: 1px solid blue;
 }
 
+/* Login/Signup Styling End */
+
+/* Nav/Header Styling Start */
+
 .gradient-text {
   background-image: linear-gradient(180deg, #E21143, #FFB03A);
   background-clip: text;
@@ -44,6 +53,7 @@ code {
 
 .heading {
   font-size: 5vw;
+  padding-right: 5vw;
 }
 
 .nav-item {
@@ -54,7 +64,7 @@ code {
 
 .nav-block {
   display: flex;
-
+  justify-content: center;
 }
 
 nav {
@@ -72,6 +82,25 @@ nav {
 }
 
 nav ul li {
-  padding-right: 5vw;
+  padding-right: 3vw;
   
 }
+
+/* Nav/Header Styling End */
+
+
+
+/* Footer Styling Start */
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-text {
+  font-size: 2vw;
+}
+
+
+
+/* Footer Styling End */
