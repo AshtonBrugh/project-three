@@ -16,6 +16,7 @@ code {
 
 /* General Styling End */
 
+
 /* Login/Signup Styling Start */
 
 .container {
@@ -42,6 +43,7 @@ code {
 }
 
 /* Login/Signup Styling End */
+
 
 /* Nav/Header Styling Start */
 
@@ -88,6 +90,41 @@ nav ul li {
 
 /* Nav/Header Styling End */
 
+
+/* Homepage Styling Start */
+
+.home-container {
+  display: flex;
+}
+
+/* Homepage Styling End */
+
+
+/* Browse Page Styling Start */
+
+.browse-container {
+  display: flex;
+}
+
+/* Browse Page Styling End */
+
+
+/* Profile Styling Start */
+
+.profile-container {
+  display: flex;
+}
+
+/* Profile Styling End */
+
+
+/* Post Listing Styling Start */
+
+.post-container {
+  display: flex;
+}
+
+/* Post Listing Styling End */
 
 
 /* Footer Styling Start */

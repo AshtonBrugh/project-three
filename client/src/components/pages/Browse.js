@@ -3,7 +3,9 @@ import React from 'react';
 const Browse = () => {
     return (
         <>
-            <h5>Browse page works!</h5>
+            <div className="browse-container">
+                <h5>Browse page works!</h5>
+            </div>
         </>
     )
 }
