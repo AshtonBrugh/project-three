@@ -2,6 +2,7 @@ import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@ap
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import Nav from './components/Nav';
 import RegisterLogin from './pages/RegisterLogin'
 import Nav from './pages/Nav'
 
@@ -19,6 +20,7 @@ function App() {
     return (
         <ApolloProvider client={client}>
             <Router>
+                <Nav />
                 <Routes>
                     <Route exact path='/' component={Login} />
                     <Route exact path='/saved' component={Signup} />
