@@ -15,7 +15,7 @@ const Login = (props) => {
             ...formState,
             [name]: value,
         });
-    };
+    }
 
     const handleFormSubmit = async (e) => {
         e.preventDefault();
@@ -24,6 +24,7 @@ const Login = (props) => {
             const { data } = await login({
                 variables: { ...formState },
             });
+            console.log('data', data);
 
             Auth.login(data.login.token);
         } catch (err) {
@@ -33,8 +34,8 @@ const Login = (props) => {
         setFormState({
             email: '',
             password: ''
-        })
-    };
+        });
+    }
 
     return (
         <div className="container border-red">
@@ -43,22 +44,12 @@ const Login = (props) => {
                 <div className="form-body">
                     <form onSubmit={handleFormSubmit}>
                         <input
-                            className="form-input"
-                            placeholder="Your email"
-                            name="email"
-                            type="email"
-                            id="email"
-                            value={formState.email}
-                            onChange={handleChange}
+                            className="form-input" placeholder="Your email" name="email"
+                            type="email" id="email" value={formState.email} onChange={handleChange}
                         />
                         <input
-                            className="form-input"
-                            placeholder="******"
-                            name="password"
-                            type="password"
-                            id="password"
-                            value={formState.password}
-                            onChange={handleChange}
+                            className="form-input" placeholder="******" name="password"
+                            type="password" id="password" value={formState.password} onChange={handleChange}
                         />
                         <button className="btn" type="submit">
                             Submit
