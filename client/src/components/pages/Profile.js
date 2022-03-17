@@ -3,6 +3,7 @@ import React from 'react';
 const Profile = () => {
     return (
         <>
+        <div className="profile-container">
             <h5>Profile page works!</h5>
             <div className='menu-container'>
                 <ul>
@@ -15,6 +16,7 @@ const Profile = () => {
             <div className='menu-output-container'>
                 <p>menu conatiner items load here!</p>
             </div>
+        </div>    
         </>
     )
 }
