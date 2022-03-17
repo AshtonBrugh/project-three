@@ -1,26 +1,22 @@
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
-import Signup from './pages/Signup';
-import Login from './pages/Login';
+import PageContainer from './components/PageContainer';
 
 const httpLink = createHttpLink({
-  uri: '/graphql'
+    uri: '/graphql'
 });
 
 const client = new ApolloClient({
-  link: httpLink,
-  cache: new InMemoryCache(),
+    link: httpLink,
+    cache: new InMemoryCache(),
 });
 
 
 function App() {
-  return (
-    <ApolloProvider client={client}>
-      <div className="App">
-        <Signup />
-        <Login />
-      </div>
-    </ApolloProvider>
-  );
+    return (
+        <ApolloProvider client={client}>
+            <PageContainer />
+        </ApolloProvider>
+    );
 }
 
 export default App;
