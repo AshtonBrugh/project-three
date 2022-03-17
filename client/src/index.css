@@ -136,8 +136,14 @@ nav ul li {
 /* Footer Styling Start */
 
 .footer {
-  display: flex;
-  justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    padding: 10px 0 10px 0;
+    border: 1px solid #55ff55;
+    display: flex;
+    justify-content: center;
 }
 
 .footer-text {
@@ -147,7 +153,8 @@ nav ul li {
 
 
 /* Footer Styling End */
-/* Footer Styling End */
+
+/* Card Component Start */
 .card.card-fill {
     width: auto;
 }
@@ -207,3 +214,5 @@ nav ul li {
     background-color: rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 5px rgba(0, 0, 0, 1);
 }
+
+/* Card Component End */
