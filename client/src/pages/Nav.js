@@ -1,7 +1,8 @@
 function Nav({currentPage, handlePageChange}) {
     return(
-        <header className= "nav-block gradient-text">
-            <h1 className="heading">FiveFires</h1>
+        <header className= "nav-block">
+            <h1 className="heading">🔥</h1>
+            <h1 className="heading gradient-text">FiveFires</h1>
                 <nav>
                     <ul className="nav">
                         <li>

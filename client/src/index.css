@@ -54,8 +54,14 @@ code {
 
 .nav-block {
   display: flex;
+
+}
+
+nav {
+  display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-left: 22vw;
   margin: 0 1.5vw 0 1.5vw;
 }
 
