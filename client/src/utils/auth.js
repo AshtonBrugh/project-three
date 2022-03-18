@@ -5,7 +5,7 @@ class AuthService {
     checkLogin() {
         const thisToken = this.getToken();
         if (thisToken) {
-            return this.isTokenExpired(thisToken);
+            return !this.isTokenExpired(thisToken);
         } else {
             return false;
         }
@@ -16,32 +16,30 @@ class AuthService {
     }
 
     loggedIn() {
-        const token = this.getToken();
-        return !!token && this.isTokenExpired(token);
+        return this.checkLogin();
     }
 
     isTokenExpired(token) {
         try {
-          const decoded = decode(token);
-          if (decoded.exp < Date.now() / 1000) { // Checking if token is expired. N
-            return true;
-          }
-          else return false;
+            const decoded = decode(token);
+            if (decoded.exp < Date.now() / 1000) { // Checking if token is expired. N
+                return true;
+            }
+            else return false;
 
         }
         catch (err) {
-          return false;
+            return false;
         }
-      }
+    }
 
-    
+
     getToken() {
         return localStorage.getItem('id_token');
     }
 
     login(idToken) {
         localStorage.setItem('id_token', idToken);
-
         window.location.assign('/');
     }
 

@@ -4,11 +4,11 @@ import ActiveListings from '../ActiveListings';
 import ActiveOffers from '../ActiveOffers';
 import ReviewList from '../reviewList';
 import Settings from '../Settings';
-import RegisterLogin from './RegisterLogin';
+import RegisterLogin from '../RegisterLogin';
 import Home from './Home'
 
 const Profile = () => {
-    
+
     const [currentPage] = React.useState('profile');
 
     const renderPage = () => {
@@ -34,9 +34,9 @@ const Profile = () => {
 
     return (
         <>
-        <div>
-            <Sidebar />
-        </div>
+            <div>
+                <Sidebar />
+            </div>
             {renderPage()}
         </>
     )

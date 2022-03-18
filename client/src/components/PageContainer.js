@@ -3,11 +3,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AuthService from "../utils/auth";
 
 import Footer from './footer';
+import RegisterLogin from './RegisterLogin';
+import Nav from './Nav';
 import Home from "./pages/Home";
 import Browse from "./pages/Browse";
 import Profile from "./pages/Profile";
 import Post from "./pages/Post";
-import Nav from './Nav';
 import Test from "./dev/test";
 
 export default function PageContainer() {
