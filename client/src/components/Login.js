@@ -7,35 +7,37 @@ import Auth from '../utils/auth';
 const Login = (props) => {
     const [formState, setFormState] = useState({ email: '', password: '' });
     const [login, { error }] = useMutation(LOGIN_USER);
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-
-        setFormState({
-            ...formState,
-            [name]: value,
+  
+    // update state based on form input changes
+    const handleChange = (event) => {
+      const { name, value } = event.target;
+  
+      setFormState({
+        ...formState,
+        [name]: value,
+      });
+    };
+  
+    // submit form
+    const handleFormSubmit = async (event) => {
+      event.preventDefault();
+  
+      try {
+        const { data } = await login({
+          variables: { ...formState },
         });
-    }
-
-    const handleFormSubmit = async (e) => {
-        e.preventDefault();
-
-        try {
-            const { data } = await login({
-                variables: { ...formState },
-            });
-            console.log('data', data);
-
-            Auth.login(data.login.token);
-        } catch (err) {
-            console.log(err);
-        }
-
-        setFormState({
-            email: '',
-            password: ''
-        });
-    }
+  
+        Auth.login(data.login.token);
+      } catch (e) {
+        console.error(e);
+      }
+  
+      // clear form values
+      setFormState({
+        email: '',
+        password: '',
+      });
+    };
 
     return (
         <div className="container border-red">

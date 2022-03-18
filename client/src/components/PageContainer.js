@@ -34,7 +34,7 @@ export default function PageContainer() {
             return <Post />;
         }
         if (currentPage.toLowerCase().includes('login')) {
-            return <Login />;
+            return <RegisterLogin />;
         }
     };
 
