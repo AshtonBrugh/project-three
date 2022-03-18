@@ -5,19 +5,19 @@ function Nav({ currentPage, handlePageChange }) {
 
     return (
         <header className="nav-block gradient-text">
-            <a onClick={() => handlePageChange('home')} className='nav-item'>
+            <a href="/home" onClick={() => handlePageChange('home')} className='nav-item'>
                 <h1 className="gradient-text heading">FiveFires</h1>
             </a>
             <nav>
                 <ul className="nav">
                     <li>
-                        <a onClick={() => handlePageChange('browse')} className='nav-item'>Browse</a>
+                        <a href="/browse" onClick={() => handlePageChange('browse')} className='nav-item'>Browse</a>
                     </li>
                     <li>
-                        <a onClick={() => handlePageChange('profile')} className='nav-item'>Profile</a>
+                        <a href="/profile" onClick={() => handlePageChange('profile')} className='nav-item'>Profile</a>
                     </li>
                     <li>
-                        <a onClick={() => handlePageChange('post')} className='nav-item'>Post Listing</a>
+                        <a href="/post" onClick={() => handlePageChange('post')} className='nav-item'>Post Listing</a>
                     </li>
                     <li>
                         {
@@ -30,7 +30,7 @@ function Nav({ currentPage, handlePageChange }) {
                                 )
                                 :
                                 (
-                                    <a onClick={() => handlePageChange('login')} className='nav-item'>Log in</a>
+                                    <a href="/login" onClick={() => handlePageChange('login')} className='nav-item'>Log in</a>
                                 )
 
                         }
