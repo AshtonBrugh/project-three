@@ -11,13 +11,13 @@ function Nav({ currentPage, handlePageChange }) {
             <nav>
                 <ul className="nav">
                     <li>
-                        <a onClick={() => handlePageChange('browse')} className='nav-item'>Browse</a>
+                        <a href="/home" onClick={() => handlePageChange('browse')} className='nav-item'>Browse</a>
                     </li>
                     <li>
-                        <a onClick={() => handlePageChange('profile')} className='nav-item'>Profile</a>
+                        <a href="/profile" onClick={() => handlePageChange('profile')} className='nav-item'>Profile</a>
                     </li>
                     <li>
-                        <a onClick={() => handlePageChange('post')} className='nav-item'>Post Listing</a>
+                        <a href="/browse" onClick={() => handlePageChange('post')} className='nav-item'>Post Listing</a>
                     </li>
                     <li>
                         {
@@ -30,7 +30,7 @@ function Nav({ currentPage, handlePageChange }) {
                                 )
                                 :
                                 (
-                                    <a onClick={() => handlePageChange('login')} className='nav-item'>Log in</a>
+                                    <a href="/login" onClick={() => handlePageChange('login')} className='nav-item'>Log in</a>
                                 )
 
                         }

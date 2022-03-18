@@ -17,26 +17,6 @@ import Test from "./dev/test";
 export default function PageContainer() {
 
     const [currentPage, setCurrentPage] = React.useState('Home');
-
-    const renderPage = () => {
-        //console.log('currentPage', currentPage.toLowerCase())
-        if (currentPage.toLowerCase().includes('home')) {
-            return <Home />;
-        }
-        if (currentPage.toLowerCase().includes('browse')) {
-            return <Browse />;
-        }
-        if (currentPage.toLowerCase().includes('profile')) {
-            return <Profile />;
-        }
-        if (currentPage.toLowerCase().includes('post')) {
-            return <Post />;
-        }
-        if (currentPage.toLowerCase().includes('login')) {
-            return <Login />;
-        }
-    };
-
     const handlePageChange = (page) => setCurrentPage(page);
 
     return (
@@ -45,7 +25,8 @@ export default function PageContainer() {
                 <>
                     <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
                     <Routes>
-                        <Route path='/' element={<Login />} />
+                        <Route path='/' element={<Home />} />
+                        <Route path='/login' element={<Login />} />
                         <Route path='/browse' element={<Browse />} />
                         <Route path='/profile' element={<Profile />} />
                         <Route path='/post' element={<Post />} />
@@ -57,7 +38,6 @@ export default function PageContainer() {
             <span>
                 Logged In: {AuthService.loggedIn().toString()}
             </span>
-            {renderPage()}
             <Footer />
         </>
     );
