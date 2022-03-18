@@ -8,18 +8,18 @@ function Nav({ currentPage, handlePageChange }) {
             <a onClick={() => handlePageChange('home')} className='nav-item'>
                 <h1 className="gradient-text heading">FiveFires</h1>
             </a>
-            <nav>
-                <ul className="nav">
-                    <li>
-                        <a href="/home" onClick={() => handlePageChange('browse')} className='nav-item'>Browse</a>
+            <nav className='nav'>
+                <ul className="nav-ul">
+                    <li className='nav-li'>
+                        <a href="/browse" onClick={() => handlePageChange('browse')} className='nav-item'>Browse</a>
                     </li>
-                    <li>
+                    <li className='nav-li'>
                         <a href="/profile" onClick={() => handlePageChange('profile')} className='nav-item'>Profile</a>
                     </li>
-                    <li>
-                        <a href="/browse" onClick={() => handlePageChange('post')} className='nav-item'>Post Listing</a>
+                    <li className='nav-li'>
+                        <a href="/post" onClick={() => handlePageChange('post')} className='nav-item'>Post Listing</a>
                     </li>
-                    <li>
+                    <li className='nav-li'>
                         {
                             AuthService.checkLogin() ?
                                 (
@@ -34,9 +34,6 @@ function Nav({ currentPage, handlePageChange }) {
                                 )
 
                         }
-                    </li>
-                    <li>
-                        <a href="/signup" onClick={() => handlePageChange('signup')} className='nav-item'>Sign up</a>
                     </li>
                 </ul>
             </nav>

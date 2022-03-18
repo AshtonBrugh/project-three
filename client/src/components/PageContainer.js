@@ -8,8 +8,6 @@ import Home from "./pages/Home";
 import Browse from "./pages/Browse";
 import Profile from "./pages/Profile";
 import Post from "./pages/Post";
-import Login from './Login';
-import Signup from './Signup';
 import Nav from './Nav';
 import RegisterLogin from './pages/RegisterLogin'
 import Test from "./dev/test";
@@ -27,10 +25,13 @@ export default function PageContainer() {
                     <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
                     <Routes>
                         <Route path='/' element={<Home />} />
-                        <Route path='/login' element={<Login />} />
-                        <Route path='/signup' element={<Signup />} />
+                        <Route path='/login' element={<RegisterLogin />} />
                         <Route path='/browse' element={<Browse />} />
                         <Route path='/profile' element={<Profile />} />
+                        <Route path='/profile/activelistings' element={<Profile />} />
+                        <Route path='/profile/activeoffers' element={<Profile />} />
+                        <Route path='/profile/reviewlist' element={<Profile />} />
+                        <Route path='/profile/settings' element={<Profile />} />
                         <Route path='/post' element={<Post />} />
                         <Route path='/dev' element={(<Test />)} />
                         <Route render={() => { return (<h1 className='display-2'>Wrong page!</h1>) }} />
