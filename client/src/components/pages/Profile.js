@@ -1,27 +1,49 @@
 import React from 'react';
+import Sidebar from '../sidebar.js';
+import ActiveListings from '../ActiveListings';
+import ActiveOffers from '../ActiveOffers';
+import ReviewList from '../reviewList';
+import Settings from '../Settings';
+import RegisterLogin from './RegisterLogin';
+import Home from './Home'
 
 const Profile = () => {
+    
+    const [currentPage] = React.useState('profile');
+
+    const renderPage = () => {
+        if (currentPage.toLowerCase().includes('home')) {
+            return <Home />;
+        }
+        if (currentPage === 'activelistings') {
+            return <ActiveListings />;
+        }
+        if (currentPage.toLowerCase().includes('activeoffers')) {
+            return <ActiveOffers />;
+        }
+        if (currentPage.toLowerCase().includes('reviewlist')) {
+            return <ReviewList />;
+        }
+        if (currentPage.toLowerCase().includes('settings')) {
+            return <Settings />;
+        }
+        if (currentPage.toLowerCase().includes('login')) {
+            return <RegisterLogin />;
+        }
+    };
+
     return (
         <>
-        <div className="profile-container">
-            <h5>Profile page works!</h5>
-            <div className='menu-container'>
-                <ul>
-                    <li>Account</li>
-                    <li>Buying</li>
-                    <li>Selling</li>
-                    <li>Listings</li>
-                </ul>
-            </div>
-            <div className='menu-output-container'>
-                <p>menu conatiner items load here!</p>
-            </div>
-        </div>    
+        <div>
+            <Sidebar />
+        </div>
+            {renderPage()}
         </>
     )
 }
 
 export default Profile;
+
 
 
 

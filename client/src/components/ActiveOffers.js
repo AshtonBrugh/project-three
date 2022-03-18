@@ -1,13 +1,13 @@
 import React from 'react';
 
-const ReviewList = () => {
+const ActiveOffers = () => {
     return (
         <>
         <div className="post-container">
-            <h5>Review Component works!</h5>
+            <h5>activeListing component works!</h5>
         </div>
         </>
     )
 }
 
-export default ReviewList;
+export default ActiveOffers;

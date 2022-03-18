@@ -139,7 +139,7 @@ code {
   justify-content: center;
 }
 
-nav {
+.nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -147,13 +147,13 @@ nav {
   margin: 0 1.5vw 0 1.5vw;
 }
 
-.nav {
+.nav-ul {
   display: flex;
   list-style: none;
   font-style: none;
 }
 
-nav ul li {
+.nav-li {
   padding-right: 3vw;
   
 }
@@ -181,9 +181,7 @@ nav ul li {
 
 /* Profile Styling Start */
 
-.profile-container {
-  display: flex;
-}
+
 
 /* Profile Styling End */
 
