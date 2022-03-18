@@ -1,6 +1,4 @@
 import React from 'react';
-import Login from '../Login';
-import Signup from '../Signup';
 
 const Test = () => {
     return (
@@ -8,6 +6,17 @@ const Test = () => {
             <h3>CSS Test Playground</h3>
 
             <div className='card card-auction-expired'>
+                <div className='card-head'>
+                    <h1>Heading</h1>
+                </div>
+                <div className='card-body'>
+                    <p>some text in a p</p>
+                </div>
+                <div className='card-foot'>
+                    <span>footer text in span</span>
+                </div>
+            </div>
+            <div className='card card-auction-active'>
                 <div className='card-head'>
                     <h1>Heading</h1>
                 </div>
