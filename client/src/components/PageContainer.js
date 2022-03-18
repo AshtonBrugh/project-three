@@ -9,6 +9,7 @@ import Browse from "./pages/Browse";
 import Profile from "./pages/Profile";
 import Post from "./pages/Post";
 import Login from './Login';
+import Signup from './Signup';
 import Nav from './Nav';
 import RegisterLogin from './pages/RegisterLogin'
 import Test from "./dev/test";
@@ -27,6 +28,7 @@ export default function PageContainer() {
                     <Routes>
                         <Route path='/' element={<Home />} />
                         <Route path='/login' element={<Login />} />
+                        <Route path='/signup' element={<Signup />} />
                         <Route path='/browse' element={<Browse />} />
                         <Route path='/profile' element={<Profile />} />
                         <Route path='/post' element={<Post />} />

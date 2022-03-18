@@ -35,6 +35,9 @@ function Nav({ currentPage, handlePageChange }) {
 
                         }
                     </li>
+                    <li>
+                        <a href="/signup" onClick={() => handlePageChange('signup')} className='nav-item'>Sign up</a>
+                    </li>
                 </ul>
             </nav>
         </header>
