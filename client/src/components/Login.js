@@ -21,7 +21,8 @@ const Login = (props) => {
         e.preventDefault();
 
         try {
-            const { data } = await login({
+            console.log('{...formState}', { ...formState })
+            const { data } = await login('', {
                 variables: { ...formState },
             });
             console.log('data', data);
@@ -56,7 +57,7 @@ const Login = (props) => {
                         </button>
                     </form>
 
-                    {error && <div>Login failed</div>}
+                    {error && <div>Login failed: <br /> {JSON.stringify(error)}</div>}
                 </div>
             </div>
         </div>
