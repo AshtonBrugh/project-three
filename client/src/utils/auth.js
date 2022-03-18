@@ -20,16 +20,19 @@ class AuthService {
         return !!token && this.isTokenExpired(token);
     }
 
-    isTokenExpired = token => {
+    isTokenExpired(token) {
         try {
           const decoded = decode(token);
-          if (decoded.exp < Date.now() / 1000) {
+          if (decoded.exp < Date.now() / 1000) { // Checking if token is expired. N
             return true;
-          } else return false;
-        } catch (err) {
+          }
+          else
+            return false;
+        }
+        catch (err) {
           return false;
         }
-      };
+      }
 
     
     getToken() {
