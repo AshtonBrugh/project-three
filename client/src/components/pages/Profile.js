@@ -13,7 +13,7 @@ const Profile = () => {
 
     const renderPage = () => {
         if (currentPage.toLowerCase().includes('profile')) {
-            return <h5>sidebar button on 'Home' -{'>'} no component yet </h5>;
+            return <h5>sidebar button on 'Home' {'(technically returns "profile")'} -{'>'} no component yet </h5>;
         }
         if (currentPage.toLowerCase().includes('activelistings')) {
             return <ActiveListings />;
