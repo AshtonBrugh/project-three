@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AuthService from "../utils/auth";
+import { RouteProps } from "react-router";
 
 import Footer from './footer';
 import RegisterLogin from './RegisterLogin';
@@ -20,7 +21,13 @@ export default function PageContainer() {
         <>
             <Router>
                 <>
-
+                    {
+                        document.location.toString().includes('profile') ?
+                            (
+                                <div className="sidebar-spacer"></div>
+                            ) :
+                            null
+                    }
                     <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
                     <span>
                         Logged In: {AuthService.loggedIn().toString()}

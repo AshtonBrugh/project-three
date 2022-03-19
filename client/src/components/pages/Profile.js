@@ -9,13 +9,13 @@ import Home from './Home'
 
 const Profile = () => {
 
-    const [currentPage] = React.useState('profile');
+    const [currentPage, setCurrentPage] = React.useState('profile');
 
     const renderPage = () => {
-        if (currentPage.toLowerCase().includes('home')) {
-            return <Home />;
+        if (currentPage.toLowerCase().includes('profile')) {
+            return <h5>sidebar button on 'Home' -{'>'} no component yet </h5>;
         }
-        if (currentPage === 'activelistings') {
+        if (currentPage.toLowerCase().includes('activelistings')) {
             return <ActiveListings />;
         }
         if (currentPage.toLowerCase().includes('activeoffers')) {
@@ -34,10 +34,10 @@ const Profile = () => {
 
     return (
         <>
-            <div>
-                <Sidebar />
+            <Sidebar currentPage={currentPage} handlePageChange={setCurrentPage} />
+            <div className='ml-3'>
+                {renderPage()}
             </div>
-            {renderPage()}
         </>
     )
 }
