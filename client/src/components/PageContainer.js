@@ -1,17 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AuthService from "../utils/auth";
+import { RouteProps } from "react-router";
 
-//import Header from './header'
 import Footer from './footer';
+import RegisterLogin from './RegisterLogin';
+import Nav from './Nav';
 import Home from "./pages/Home";
 import Browse from "./pages/Browse";
 import Profile from "./pages/Profile";
 import Post from "./pages/Post";
-import Nav from './Nav';
-import RegisterLogin from './pages/RegisterLogin'
 import Test from "./dev/test";
-
 
 export default function PageContainer() {
 
@@ -22,7 +21,17 @@ export default function PageContainer() {
         <>
             <Router>
                 <>
+                    {
+                        document.location.toString().includes('profile') ?
+                            (
+                                <div className="sidebar-spacer"></div>
+                            ) :
+                            null
+                    }
                     <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
+                    <span>
+                        Logged In: {AuthService.loggedIn().toString()}
+                    </span>
                     <Routes>
                         <Route path='/' element={<Home />} />
                         <Route path='/login' element={<RegisterLogin />} />
@@ -38,9 +47,7 @@ export default function PageContainer() {
                     </Routes>
                 </>
             </Router>
-            <span>
-                Logged In: {AuthService.loggedIn().toString()}
-            </span>
+            <div className="spacer"></div>
             <Footer />
         </>
     );

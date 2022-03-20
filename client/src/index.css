@@ -19,6 +19,13 @@ code {
     monospace;
 }
 
+
+.sidebar-spacer {
+    float: left;
+    height: 100vh;
+    width: 225px;
+}
+
 /* General Styling End */
 
 /* Card Styling Start */
@@ -198,8 +205,15 @@ code {
 /* Footer Styling Start */
 
 .footer {
-  display: flex;
-  justify-content: center;
+    background-image: linear-gradient(90deg, rgba(124,0,0,1) 0%, rgba(125,81,0,1) 100%);
+    margin-top: 60px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    padding: 10px 0 10px 0;
+    display: flex;
+    justify-content: center;
 }
 
 .footer-text {

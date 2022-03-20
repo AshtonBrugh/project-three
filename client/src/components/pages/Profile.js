@@ -4,18 +4,18 @@ import ActiveListings from '../ActiveListings';
 import ActiveOffers from '../ActiveOffers';
 import ReviewList from '../reviewList';
 import Settings from '../Settings';
-import RegisterLogin from './RegisterLogin';
+import RegisterLogin from '../RegisterLogin';
 import Home from './Home'
 
 const Profile = () => {
-    
-    const [currentPage] = React.useState('profile');
+
+    const [currentPage, setCurrentPage] = React.useState('profile');
 
     const renderPage = () => {
-        if (currentPage.toLowerCase().includes('home')) {
-            return <Home />;
+        if (currentPage.toLowerCase().includes('profile')) {
+            return <h5>sidebar button on 'Home' {'(technically returns "profile")'} -{'>'} no component yet </h5>;
         }
-        if (currentPage === 'activelistings') {
+        if (currentPage.toLowerCase().includes('activelistings')) {
             return <ActiveListings />;
         }
         if (currentPage.toLowerCase().includes('activeoffers')) {
@@ -34,11 +34,10 @@ const Profile = () => {
 
     return (
         <>
-        <div>
-            <Sidebar />
-            
-        </div>
-            {renderPage()}
+            <Sidebar currentPage={currentPage} handlePageChange={setCurrentPage} />
+            <div className='ml-3'>
+                {renderPage()}
+            </div>
         </>
     )
 }

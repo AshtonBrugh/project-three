@@ -14,10 +14,12 @@ const resolvers = {
             throw new AuthenticationError('Not logged in!')
         },
         users: async () => {
-            return User.find({});
+            return User.find({})
+                .select('-__v -password');
         },
         user: async (parent, { username }) => {
-            return User.findOne({ username });
+            return User.findOne({ username })
+                .select('-__v -password');
         },
         product: async (parent, { _id }) => {
             return Product.findOne({ _id })
@@ -35,14 +37,14 @@ const resolvers = {
             return { user, token };
 
         },
-        login: async (parent, { email, password }) => {
-            const user = await User.findOne({ email });
+        login: async (parent, args) => {
 
+            const user = await User.findOne({ email: args.email });
             if (!user) {
                 throw new AuthenticationError('Incorrect credentials');
             }
 
-            const correctPw = await user.isCorrectPassword(password);
+            const correctPw = await user.isCorrectPassword(args.password);
 
             if (!correctPw) {
                 throw new AuthenticationError('Incorrect credentials');

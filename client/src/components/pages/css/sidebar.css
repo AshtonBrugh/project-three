@@ -1,6 +1,8 @@
 .sidebar {
-    position: absolute;
-    width: 220px;
+    position: fixed;
+    top: 0;
+    float: left;
+    width: auto;
   }
   .sidebar .pro-sidebar {
     height: 100vh;
@@ -67,6 +69,11 @@
 
   .pro-sidebar .pro-menu.shaped .pro-menu-item > .pro-inner-item > .pro-icon-wrapper {
     background-image: linear-gradient(180deg, #E21143, #FFB03A);
+  }
+  .flexy {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
   }
   
   @media only screen and (max-width: 720px) {
