@@ -67,6 +67,15 @@
   .pro-sidebar .pro-menu.shaped .pro-menu-item > .pro-inner-item > .pro-icon-wrapper {
     background-image: linear-gradient(180deg, #E21143, #FFB03A);
   }
+  .pro-sidebar .pro-menu > ul > .pro-sub-menu > .pro-inner-list-item {
+    background-color: white;
+  }
+
+  .pro-sidebar .pro-menu .pro-menu-item.pro-sub-menu .pro-inner-list-item .pro-inner-item > .pro-icon-wrapper {
+    background-image: linear-gradient(180deg, #E21143, #FFB03A);
+    color: transparent;
+  }
+
   .flexy {
       display: flex;
       flex-direction: row;
