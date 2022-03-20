@@ -36,6 +36,7 @@ const Profile = () => {
         <>
         <div>
             <Sidebar />
+            
         </div>
             {renderPage()}
         </>
