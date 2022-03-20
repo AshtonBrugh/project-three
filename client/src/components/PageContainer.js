@@ -1,61 +1,54 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AuthService from "../utils/auth";
+import { RouteProps } from "react-router";
 
-import Header from "./header";
 import Footer from './footer';
+import RegisterLogin from './RegisterLogin';
+import Nav from './Nav';
 import Home from "./pages/Home";
 import Browse from "./pages/Browse";
 import Profile from "./pages/Profile";
 import Post from "./pages/Post";
-import Login from './Login';
-import Nav from './Nav';
-import RegisterLogin from './pages/RegisterLogin'
-
+import Test from "./dev/test";
 
 export default function PageContainer() {
 
     const [currentPage, setCurrentPage] = React.useState('Home');
-
-    const renderPage = () => {
-        //console.log('currentPage', currentPage.toLowerCase())
-        if (currentPage.toLowerCase().includes('home')) {
-            return <Home />;
-        }
-        if (currentPage.toLowerCase().includes('browse')) {
-            return <Browse />;
-        }
-        if (currentPage.toLowerCase().includes('profile')) {
-            return <Profile />;
-        }
-        if (currentPage.toLowerCase().includes('post')) {
-            return <Post />;
-        }
-        if (currentPage.toLowerCase().includes('login')) {
-            return <Login />;
-        }
-    };
-
     const handlePageChange = (page) => setCurrentPage(page);
 
     return (
         <>
             <Router>
                 <>
+                    {
+                        document.location.toString().includes('profile') ?
+                            (
+                                <div className="sidebar-spacer"></div>
+                            ) :
+                            null
+                    }
                     <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
+                    <span>
+                        Logged In: {AuthService.loggedIn().toString()}
+                    </span>
                     <Routes>
-                        <Route exact path='/' component={Login} />
-                        <Route exact path='/browse' component={Browse} />
-                        <Route exact path='/profile' component={Profile} />
-                        <Route exact path='/post' component={Post} />
+                        <Route path='/' element={<Home />} />
+                        <Route path='/login' element={<RegisterLogin />} />
+                        <Route path='/browse' element={<Browse />} />
+                        <Route path='/profile' element={<Profile />} />
+                        <Route path='/profile/activelistings' element={<Profile />} />
+                        <Route path='/profile/activeoffers' element={<Profile />} />
+                        <Route path='/profile/reviewlist' element={<Profile />} />
+                        <Route path='/profile/settings' element={<Profile />} />
+                        <Route path='/post' element={<Post />} />
+                        <Route path='/dev' element={(<Test />)} />
                         <Route render={() => { return (<h1 className='display-2'>Wrong page!</h1>) }} />
                     </Routes>
                 </>
             </Router>
-            <span>
-                Logged In: {AuthService.loggedIn().toString()}
-            </span>
-            {renderPage()}
+            <div className="spacer"></div>
+            <Footer />
         </>
     );
 }

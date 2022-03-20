@@ -1,13 +1,13 @@
 import React from 'react';
 
-const Post = () => {
+const Settings = () => {
     return (
         <>
         <div className="post-container">
-            <h5>Post page works!</h5>
+            <h5>Settings component works!</h5>
         </div>
         </>
     )
 }
 
-export default Post;
+export default Settings;
