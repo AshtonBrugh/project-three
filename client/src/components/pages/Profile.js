@@ -1,5 +1,5 @@
 import React from 'react';
-import Sidebar from '../sidebar.js';
+import ProfileSidebar from '../profileSidebar.js';
 import ActiveListings from '../ActiveListings';
 import ActiveOffers from '../ActiveOffers';
 import ReviewList from '../reviewList';
@@ -13,7 +13,7 @@ const Profile = () => {
 
     const renderPage = () => {
         if (currentPage.toLowerCase().includes('profile')) {
-            return <h5>sidebar button on 'Home' {'(technically returns "profile")'} -{'>'} no component yet </h5>;
+            return <h5>Coming Soon! </h5>;
         }
         if (currentPage.toLowerCase().includes('activelistings')) {
             return <ActiveListings />;
@@ -34,10 +34,8 @@ const Profile = () => {
 
     return (
         <>
-            <Sidebar currentPage={currentPage} handlePageChange={setCurrentPage} />
-            <div className='ml-3'>
-                {renderPage()}
-            </div>
+            <ProfileSidebar currentPage={currentPage} handlePageChange={setCurrentPage} />
+            {renderPage()}
         </>
     )
 }

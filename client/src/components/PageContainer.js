@@ -21,17 +21,9 @@ export default function PageContainer() {
         <>
             <Router>
                 <>
-                    {
-                        document.location.toString().includes('profile') ?
-                            (
-                                <div className="sidebar-spacer"></div>
-                            ) :
-                            null
-                    }
                     <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
-                    <span>
-                        Logged In: {AuthService.loggedIn().toString()}
-                    </span>
+                    
+                      
                     <Routes>
                         <Route path='/' element={<Home />} />
                         <Route path='/login' element={<RegisterLogin />} />
@@ -48,6 +40,9 @@ export default function PageContainer() {
                 </>
             </Router>
             <div className="spacer"></div>
+            <span> 
+                Logged In: {AuthService.loggedIn().toString()}
+            </span>
             <Footer />
         </>
     );

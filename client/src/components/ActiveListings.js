@@ -1,12 +1,14 @@
 import React from 'react';
 
 const ActiveListings = () => {
-    return (
-        <>
-        <div className="post-container">
-            <h5>activeListing component works!</h5>
+    return (   
+        <div className="profile-containers">
+            <h1 className='profile-headers'>Your Active Listings</h1>
+            <div>
+                <p>Coming Soon!</p>
+            </div>
         </div>
-        </>
+        
     )
 }
 

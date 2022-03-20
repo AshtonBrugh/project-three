@@ -21,28 +21,15 @@ import "./pages/css/sidebar.css";
 
 
 
-const Sidebar = ({ currentPage, handlePageChange }) => {
-
-    const [menuCollapse, setMenuCollapse] = useState(false)
-
-    const menuIconClick = () => {
-        menuCollapse ? setMenuCollapse(false) : setMenuCollapse(true);
-    };
+const ProfileSidebar = ({ currentPage, handlePageChange }) => {
 
     return (
         <>
             <div className="sidebar">
-                <ProSidebar collapsed={menuCollapse}>
+                <ProSidebar>
                     <SidebarHeader>
                         <div className="logotext">
-                            <p>{menuCollapse ? "Menu" : "Menu"}</p>
-                        </div>
-                        <div className="closemenu" onClick={menuIconClick}>
-                            {menuCollapse ? (
-                                <FiArrowRightCircle />
-                            ) : (
-                                <FiArrowLeftCircle />
-                            )}
+                            <p>Where to?</p>
                         </div>
                     </SidebarHeader>
                     <SidebarContent>
@@ -71,10 +58,11 @@ const Sidebar = ({ currentPage, handlePageChange }) => {
                         </Menu>
                     </SidebarFooter>
                 </ProSidebar>
+                <div className='spacer'></div>
             </div>
         </>
     );
 };
 
 
-export default Sidebar;
+export default ProfileSidebar;
