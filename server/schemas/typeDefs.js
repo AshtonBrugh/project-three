@@ -10,16 +10,16 @@ const typeDefs = gql`
         products: [Product]
     }
     type Auth {
-        token: ID!
+        token: ID
         user: User
     }
     type Query {
         me: User
         users: [User]
         user(username: String!): User
-        products(username: String!) : [Product]
-        product(_id: ID!): Product
-    }
+        products(username: String): [Product]
+        product(_id: ID): Product
+      }
     type Product {
         _id: ID!
         title: String

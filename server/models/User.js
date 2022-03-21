@@ -34,17 +34,18 @@ const userSchema = new Schema(
     }
 );
 
-userSchema.pre('save', async function (next) {
+userSchema.pre('save', async function(next) {
     if (this.isNew || this.isModified('password')) {
-        const saltRounds = 10;
-        this.password = await bcrypt.hash(this.password, saltRounds);
+      const saltRounds = 10;
+      this.password = await bcrypt.hash(this.password, saltRounds);
     }
-
+  
     next();
-});
+  });
+
 
 userSchema.methods.isCorrectPassword = async function (password) {
-    return true;//bcrypt.compare('null', this.password);
+    return bcrypt.compare('null', this.password);
 };
 
 const User = model('User', userSchema);
