@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AuthService from "../utils/auth";
-import { RouteProps } from "react-router";
 
 import Footer from './footer';
 import RegisterLogin from './RegisterLogin';
@@ -22,8 +21,8 @@ export default function PageContainer() {
             <Router>
                 <>
                     <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
-                    
-                      
+
+
                     <Routes>
                         <Route path='/' element={<Home />} />
                         <Route path='/login' element={<RegisterLogin />} />
@@ -40,7 +39,7 @@ export default function PageContainer() {
                 </>
             </Router>
             <div className="spacer"></div>
-            <span> 
+            <span>
                 Logged In: {AuthService.loggedIn().toString()}
             </span>
             <Footer />
