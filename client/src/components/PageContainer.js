@@ -24,7 +24,7 @@ export default function PageContainer() {
 
 
                     <Routes>
-                        <Route path='/' element={<Home />} />
+                        <Route path='/' element={<Browse />} />
                         <Route path='/login' element={<RegisterLogin />} />
                         <Route path='/browse' element={<Browse />} />
                         <Route path='/profile' element={<Profile />} />
