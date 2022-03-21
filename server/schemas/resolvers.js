@@ -7,6 +7,7 @@ const resolvers = {
         me: async (parent, args, context) => {
             if (context.user) {
                 const userData = await User.findOne({ _id: context.user._id })
+                .select('-__v -password')
 
                 return userData;
             }
@@ -33,20 +34,20 @@ const resolvers = {
             const user = await User.create(args);
             const token = signToken(user);
 
-            return { user, token };
+            return { token, user };
 
         },
-        login: async (parent, args) => {
-
-            const user = await User.findOne({ email: args.email });
+        login: async (parent, { email, password }) => {
+            const user = await User.findOne({ email });
+      
             if (!user) {
-                throw new AuthenticationError('Incorrect credentials');
+              throw new AuthenticationError('Incorrect credentials');
             }
-
-            const correctPw = await user.isCorrectPassword(args.password);
-
+      
+            const correctPw = await user.isCorrectPassword(password);
+      
             if (!correctPw) {
-                throw new AuthenticationError('Incorrect credentials');
+              throw new AuthenticationError('Incorrect credentials');
             }
 
             const token = signToken(user);
