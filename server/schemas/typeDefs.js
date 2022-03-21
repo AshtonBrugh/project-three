@@ -16,6 +16,7 @@ const typeDefs = gql`
         me: User
         users: [User]
         user(username: String!): User
+        all_products: [Product]
         products(username: String): [Product]
         product(_id: ID): Product
       }

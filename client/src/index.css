@@ -29,6 +29,14 @@ code {
     width: 215px;
 }
 
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    width: 80vw;
+    overflow-x: scroll;
+}
+
 /* General Styling End */
 
 /* Card Styling Start */
