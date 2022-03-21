@@ -25,6 +25,9 @@ const resolvers = {
         product: async (parent, { _id }) => {
             return Product.findOne({ _id })
         },
+        allProducts: async () => {
+            return Product.find({});
+        },
         products: async (parent, { username }) => {
             const params = username ? { username } : {};
             return Product.find(params);
@@ -55,14 +58,17 @@ const resolvers = {
             return { token, user };
         },
         addProduct: async (parent, args, context) => {
+            console.log('[resolvers.addProduct()]> context.user', context.user);
             if (context.user) {
                 const product = await Product.create({ ...args, username: context.user.username });
 
-                await User.findByIdAndUpdate(
+                const updatedUser = await User.findByIdAndUpdate(
                     { _id: context.user._id },
                     { $push: { products: product._id } },
                     { new: true }
                 );
+                console.log('[resolvers.addProduct()]> updatedUser', updatedUser);
+                console.log('[resolvers.addProduct()]> product', product);
 
                 return product;
             }
