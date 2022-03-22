@@ -4,8 +4,7 @@ import { QUERY_ALL_PRODUCTS } from "../utils/queries";
 import Item from "../components/Item"
 
 
-const ProductList = ({ currentFilter, setCurrentFilter }) => {
-    console.log(currentFilter)
+const ProductList = ({ currentFilter }) => {
 
     const { loading, error, data } = useQuery(QUERY_ALL_PRODUCTS);
 
@@ -15,12 +14,22 @@ const ProductList = ({ currentFilter, setCurrentFilter }) => {
         <div className="row my-4 px-5">
             {
                 data.all_products.map(product => {
-                    return (
-                        <div className="col-lg-4 mb-4">
+                    if (currentFilter) {
+                        if (product.categories.includes(currentFilter)) {
+                            return (
+                                <div className="col-lg-4 mb-4">
+                                    <Item product={product} />
+                                </div>
+                            )
+                        }
+                    } else {
+                        return (
+                            <div className="col-lg-4 mb-4">
+                                <Item product={product} />
+                            </div>
+                        )
+                    }
 
-                            <Item product={product} />
-                        </div>
-                    )
                 })
             }
         </div>
