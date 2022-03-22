@@ -29,7 +29,9 @@ textarea:hover, input:hover {
     margin: 1rem;
     margin-bottom: 4rem;
     background: linear-gradient(180deg, #E21143, #FFB03A);
-    padding: .40rem;
+    padding: .35rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     border: 1px solid transparent;
     border-radius: .5rem;
     font-weight: 400;
