@@ -70,27 +70,30 @@ const Post = () => {
 
     return (
         <div className='container'>
-            <form className="" onSubmit={handleFormSubmit}>
-                <div className='icon'>
-                    <span id='file-name'><AiFillFire size={75} /></span>
-                </div>
-                <div className='upload'>
-                    <input type='file' id='file-input' onChange={imageChange} onSubmit={handleFormSubmit}></input>
-                    <label for='file-input'>Upload Image</label>
-                </div>
-                <div>
-                    <input className='input-area input-title' type='text' placeholder='Product Title' value={productTitle} onChange={handleChange} onSubmit={handleFormSubmit} ></input>
-                </div>
-                <div>
-                    <textarea className="input-area" placeholder="Product Description" rows="5" value={productDescription} onSubmit={handleFormSubmit}></textarea>
-                </div>
-                <div>
+            <form className="input-form" onSubmit={handleFormSubmit}>
+                <div className='input-container'>
+                    <div className='icon'>
+                        <span id='file-name'><AiFillFire size={75} /></span>
+                    </div>
+                    <div className='upload'>
+                        <input type='file' id='file-input' onChange={imageChange} onSubmit={handleFormSubmit}></input>
+                        <label for='file-input'>Upload Image</label>
+                    </div>
+                    <div>
+                        <input className='input-area input-title' type='text' placeholder='Product Title' value={productTitle} onChange={handleChange} onSubmit={handleFormSubmit} ></input>
+                    </div>
+                    <div>
+                        <textarea className="input-area" placeholder="Product Description" rows="5" value={productDescription} onSubmit={handleFormSubmit}></textarea>
+                    </div>
+                    <div>
 
+                    </div>
+
+                    <button className="button" type="submit">
+                        Post
+                    </button>
                 </div>
 
-                <button className="button" type="submit">
-                    Post
-                </button>
             </form>
         </div>
     )

@@ -6,11 +6,6 @@ textarea:hover, input:hover {
        
 }
 
-.container {
-    border: 1px solid black;
-    border-radius: 1rem;
-    width: 60%;
-}
 
 .input-area {
     width: 90%;
@@ -20,6 +15,16 @@ textarea:hover, input:hover {
     border: 1px solid black;
 }
 
+.input-container {
+    padding: 3rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.input-form {
+    border: 1px solid black;
+    border-radius: .75rem;
+}
 
 .input-title {
     margin-top: .5rem;
