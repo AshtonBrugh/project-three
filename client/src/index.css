@@ -168,9 +168,8 @@ margin-bottom: 80px;
 /* Footer Styling Start */
 
 .footer {
-    background-image: linear-gradient(90deg, rgba(124,0,0,1) 0%, rgba(125,81,0,1) 100%);
     margin-top: 60px;
-    position: relative;
+    position: fixed;
     bottom: 0;
     width: 100%;
     height: auto;
