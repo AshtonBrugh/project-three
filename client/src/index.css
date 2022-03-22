@@ -83,10 +83,11 @@ code {
 
 .nav-block {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   top: 0;
   width: 100%;
   z-index: 200;
+  margin-left: 2vw;
 }
 
 .nav {
@@ -101,6 +102,7 @@ code {
   display: flex;
   list-style: none;
   font-style: none;
+  margin-left: 4vw;
 }
 
 .nav-li {
