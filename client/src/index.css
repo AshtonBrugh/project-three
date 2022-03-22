@@ -187,6 +187,18 @@ margin-bottom: 80px;
   display: flex;
 }
 
+.title-label {
+    position: relative !important;
+    top: -40px !important;
+    right: -100px !important;
+}
+
+.description-label {
+    position: relative !important;
+    top: -50px !important;
+    right: -100px !important;
+}
+
 /* Post Listing Styling End */
 
 
