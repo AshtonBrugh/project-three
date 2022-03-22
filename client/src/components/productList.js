@@ -12,11 +12,11 @@ const ProductList = ({ currentFilter, setCurrentFilter }) => {
     if (loading) return 'Loading...';
     if (error) return `Error! ${error.message}`;
     return (
-        <div className="row">
+        <div className="row my-4 px-5">
             {
                 data.all_products.map(product => {
                     return (
-                        <div className="col-sm-4">
+                        <div className="col-lg-4 mb-4">
 
                             <Item product={product} />
                         </div>
