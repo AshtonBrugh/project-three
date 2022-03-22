@@ -22,25 +22,12 @@ const PostSchema = new Schema(
     },
     {
         toJSON: {
-            virtuals: true
+            getters: true
         }
     }
 );
 
-PostSchema.pre('save', async function (next) {
-    if (this.isNew || this.isModified('password')) {
-        const saltRounds = 10;
-        this.password = await bcrypt.hash(this.password, saltRounds);
-    }
-
-    next();
-});
-
-PostSchema.methods.isCorrectPassword = async function (password) {
-    return bcrypt.compare(password, this.password);
-};
-
 const Post = model('Post', PostSchema);
 
 
-module.exports = User;
+module.exports = Post;
