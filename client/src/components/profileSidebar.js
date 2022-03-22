@@ -35,26 +35,26 @@ const ProfileSidebar = ({ currentPage, handlePageChange }) => {
                     <SidebarContent>
                         <Menu iconShape="square">
                             <MenuItem active={true} icon={<FiHome />}>
-                                <a onClick={() => handlePageChange('profile')} />Home
+                                <a onClick={() => handlePageChange('profile')} > </a>Home
                             </MenuItem>
                             <MenuItem icon={<FaList />}>
-                                <a onClick={() => handlePageChange('activelistings')} />Active Listings
+                                <a onClick={() => handlePageChange('activelistings')} > Active Listings </a>
                             </MenuItem>
                             <MenuItem icon={<FaRegHeart />}>
-                                <a onClick={() => handlePageChange('activeoffers')} />Active Offers
+                                <a onClick={() => handlePageChange('activeoffers')} > Active Offers </a>
                             </MenuItem>
                             <MenuItem icon={<RiPencilLine />}>
-                                <a onClick={() => handlePageChange('reviewlist')} />Reviews
+                                <a onClick={() => handlePageChange('reviewlist')} > Reviews </a>
                             </MenuItem>
                             <MenuItem icon={<BiCog />}>
-                                <a onClick={() => handlePageChange('settings')} />Settings
+                                <a onClick={() => handlePageChange('settings')} > Settings </a>
                             </MenuItem>
                         </Menu>
                     </SidebarContent>
                     <SidebarFooter>
                         <Menu iconShape="square">
                             <MenuItem icon={<FiLogOut />}>
-                                <a href='/login' onClick={() => handlePageChange('RegisterLogin')} />Logout</MenuItem>
+                                <a href='/login' onClick={() => handlePageChange('RegisterLogin')} > Logout </a></MenuItem>
                         </Menu>
                     </SidebarFooter>
                 </ProSidebar>
