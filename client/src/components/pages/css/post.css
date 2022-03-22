@@ -1,0 +1,66 @@
+textarea{resize: none !important;}
+
+textarea:hover, input:hover {
+    transition: all 400ms ease;
+    border-color: red;
+       
+}
+
+.container {
+    border: 1px solid black;
+    border-radius: 1rem;
+    width: 60%;
+}
+
+.input-area {
+    width: 90%;
+    margin: 1rem;
+    padding: .5rem;
+    border-radius: .5rem;
+    border: 1px solid black;
+}
+
+
+.input-title {
+    margin-top: .5rem;
+}
+
+.button {
+    margin: 1rem;
+    margin-bottom: 4rem;
+    background: linear-gradient(180deg, #E21143, #FFB03A);
+    padding: .40rem;
+    border: 1px solid transparent;
+    border-radius: .5rem;
+    font-weight: 400;
+}
+
+button:hover {
+    transition: all 400ms ease;
+    background: linear-gradient(90deg, #E21143, #FFB03A);
+    color: white;
+}
+
+input#file-input {
+    display: none;
+}
+
+input#file-input + label {
+    background: linear-gradient(180deg, #E21143, #FFB03A);
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding: .4rem;
+    border: 1px solid transparent;
+    border-radius: .5rem;
+}
+
+input#file-input + label:hover {
+    transition: all 400ms ease;
+    background: linear-gradient(90deg, #E21143, #FFB03A);
+    color: white;
+}
+
+.icon {
+    margin-top: 4rem;
+}
+
