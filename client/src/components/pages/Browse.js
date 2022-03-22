@@ -5,7 +5,6 @@ import ActiveOffers from '../ActiveOffers';
 import ReviewList from '../reviewList';
 import Settings from '../Settings';
 import RegisterLogin from '../RegisterLogin';
-import Home from './Home'
 
 const Browse = () => {
 

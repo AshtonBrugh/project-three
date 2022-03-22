@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import profuctList from './productList'
 
 import {
     ProSidebar,
@@ -22,7 +23,7 @@ import "./pages/css/sidebar.css";
 
 
 
-const BrowseSidebar = ({ currentPage, handlePageChange }) => {
+const BrowseSidebar = ({ currentFilter, setCurrentFilter }) => {
 
     return (
         <>
@@ -37,7 +38,8 @@ const BrowseSidebar = ({ currentPage, handlePageChange }) => {
                     <Menu iconShape="square">
                         <SubMenu title="Collectibles" icon={<FaGem />}>
                             <SubMenu title="Trading Cards" icon={<FaHeart />}>
-                                <MenuItem>Sports</MenuItem>
+                                <MenuItem>
+                                    <a onclick={() => setCurrentFilter('sports') } /> Sports</MenuItem>
                                 <MenuItem>Pokemon</MenuItem>
                                 <MenuItem>Magic the Gathering</MenuItem>
                             </SubMenu>
