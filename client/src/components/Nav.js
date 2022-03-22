@@ -5,7 +5,7 @@ function Nav({ currentPage, handlePageChange }) {
 
     return (
         <header className="nav-block gradient-text">
-            <a href="/home" onClick={() => handlePageChange('home')} className='nav-item'>
+            <a href="/" onClick={() => handlePageChange('home')} className='nav-item'>
                 <h1 className="gradient-text heading">FiveFires</h1>
             </a>
             <nav className='nav'>
