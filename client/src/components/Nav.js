@@ -11,7 +11,7 @@ function Nav({ currentPage, handlePageChange }) {
             <nav className='nav'>
                 <ul className="nav-ul">
                     <li className='nav-li'>
-                        <a href="/browse" onClick={() => handlePageChange('browse')} className='nav-item'>Browse</a>
+                        <a href="/home" onClick={() => handlePageChange('browse')} className='nav-item'>Browse</a>
                     </li>
                     <li className='nav-li'>
                         <a href="/profile" onClick={() => handlePageChange('profile')} className='nav-item'>Profile</a>

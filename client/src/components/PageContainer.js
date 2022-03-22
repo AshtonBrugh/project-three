@@ -5,7 +5,6 @@ import AuthService from "../utils/auth";
 import Footer from './footer';
 import RegisterLogin from './RegisterLogin';
 import Nav from './Nav';
-import Home from "./pages/Home";
 import Browse from "./pages/Browse";
 import Profile from "./pages/Profile";
 import Post from "./pages/Post";
@@ -25,7 +24,7 @@ export default function PageContainer() {
                     <Routes>
                         <Route path='/' element={<Browse />} />
                         <Route path='/login' element={<RegisterLogin />} />
-                        <Route path='/browse' element={<Browse />} />
+                        <Route path='/home' element={<Browse />} />
                         <Route path='/profile' element={<Profile />} />
                         <Route path='/item/:id' element={<SingleProduct />} />
                         <Route path='/profile/activelistings' element={<Profile />} />
