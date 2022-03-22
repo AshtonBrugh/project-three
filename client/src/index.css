@@ -24,6 +24,12 @@ code {
     monospace;
 }
 
+
+.product-descrption > textarea{
+ resize: none;
+ margin-top: 10;
+}
+
 .spacer {
   height: 6vw;
 }
