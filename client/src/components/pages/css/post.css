@@ -22,7 +22,7 @@ textarea:hover, input:hover {
 }
 
 .input-form {
-    border: 1px solid black;
+    border: 3px solid black;
     border-radius: .75rem;
 }
 
