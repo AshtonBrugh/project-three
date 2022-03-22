@@ -1,5 +1,4 @@
 const { Schema, model } = require('mongoose');
-const bcrypt = require('bcrypt');
 
 const PostSchema = new Schema(
     {
@@ -18,6 +17,11 @@ const PostSchema = new Schema(
         salestart: {
             type: Schema.Types.Date,
             required: true
+        },
+        postdate: {
+            type: Schema.Types.Date,
+            required: true,
+            default: Date.now()
         }
     },
     {
