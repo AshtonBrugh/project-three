@@ -1,22 +1,22 @@
-import React from 'react';
+import React from "react";
 
-const Item = ({ item }) => {
+
+const Item = ({ product }) => {
     return (
-        <>
-            <div className='card'>
-                <div className='card-head'>
-                    <span>item.name</span>
-                    <img src='https://baconmockup.com/300/200' />
-                </div>
-                <div className='card-body'>
-                    item.description
-                </div>
-                <div className='card-foot'>
-                    Seller: item.username
+        <div>
+            <div className="card" >
+                <p className="card-head">
+                    <span style={{ fontWeight: 700 }} className="card-head h1">
+                        Title:{product.title}
+                    </span>
+                </p>
+                <div className="card-body">
+                    image: <img src={product.image} alt={product.title} />
+                    <p>description: {product.description}</p>
                 </div>
             </div>
-        </>
+        </div>
     )
-}
+};
 
 export default Item;

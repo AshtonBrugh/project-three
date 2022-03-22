@@ -24,7 +24,7 @@ export const ADD_USER = gql`
     }
     `;
 
-    export const QUERY_ME = gql`
+export const QUERY_ME = gql`
     {
       me {
         _id
@@ -34,9 +34,9 @@ export const ADD_USER = gql`
       }
     }
   `;
-  
- 
- 
+
+
+
 export const QUERY_ADD_PRODUCT = gql`
     mutation addProduct($title: String!, $description: String!, $image: String!, $username: String!) {
         addProduct(title: $title, description: $description, image: $image, username: $username) {
@@ -46,5 +46,4 @@ export const QUERY_ADD_PRODUCT = gql`
             username
         }
     }
-    `;
     `;
