@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import ProductList from './productList'
+import React from "react";
 
 import AuthService from "../utils/auth";
 
@@ -13,14 +12,12 @@ import {
     SidebarContent,
 } from "react-pro-sidebar";
 
-import { FaList, FaRegHeart, FaGem, FaHeart } from "react-icons/fa";
-import { FiHome, FiLogOut, FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
-import { RiPencilLine } from "react-icons/ri";
-import { BiCog } from "react-icons/bi";
+import { FaGem, FaHeart } from "react-icons/fa";
+import { FiLogOut } from "react-icons/fi";
 
 
 import "react-pro-sidebar/dist/css/styles.css";
-import "./pages/css/sidebar.css";
+import "./pages/profile/css/sidebar.css";
 
 
 
