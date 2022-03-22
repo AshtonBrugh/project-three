@@ -222,6 +222,17 @@ margin-bottom: 80px;
   display: flex;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-label {
+  padding: 5vw;
+  margin: 5vw;
+}
+
 /* Post Listing Styling End */
 
 
