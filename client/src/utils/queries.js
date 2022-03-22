@@ -8,6 +8,7 @@ export const QUERY_ALL_PRODUCTS = gql`
             description
             image
             username
+            categories
             reviews {
                 content
                 username
@@ -24,6 +25,7 @@ export const QUERY_PRODUCT = gql`
       description
       image
       username
+      categories
       reviews {
         content
         username

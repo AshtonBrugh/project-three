@@ -28,6 +28,7 @@ const typeDefs = gql`
         image: String
         username: String
         reviews: [Review]
+        categories: [String]
     }
 
     type Review {

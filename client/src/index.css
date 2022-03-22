@@ -31,6 +31,16 @@ code {
 }
 
 
+.auction-active {
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5)
+}
+
+.auction-expired {
+  background-color: rgba(255, 0, 0, 0.2);
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+
 /* General Styling End */
 
 /* Login/Signup Styling Start */

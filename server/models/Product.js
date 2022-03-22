@@ -25,7 +25,8 @@ const productSchema = new Schema(
             type: String,
             required: true
         },
-        reviews: [reviewSchema]
+        reviews: [reviewSchema],
+        categories: [{ type: String }]
     },
     {
         toJSON: {

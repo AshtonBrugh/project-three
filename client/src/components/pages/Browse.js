@@ -4,10 +4,10 @@ import ProductList from '../productList.js';
 
 const Browse = () => {
 
-    const [currentFilter, setCurrentFilter] = React.useState('profile');
+    const [currentFilter, setCurrentFilter] = React.useState('');
 
     const renderPage = () => {
-        return <ProductList filter={currentFilter} />
+        return <ProductList currentFilter={currentFilter} />
     };
 
     return (
