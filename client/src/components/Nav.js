@@ -39,20 +39,25 @@ function Nav({ currentPage, handlePageChange }) {
                 </ul>
             </nav>
             <a href="/profile" onClick={() => handlePageChange('profile')} className='user-profile'>
-            {
-                'Welcome, '+
-                (loading?
+                {
+                    'Welcome' +
                     (
-                        'User'
+                        (loading) ?
+                            (
+                                ', Guest!'
+                            )
+                            : (data) ?
+                                (
+                                    ', ' + data.me.username + '!'
+                                )
+                                :
+                                (
+                                    ', Guest!'
+                                )
                     )
-                    :
-                    (
-                        data.me.username
-                    )
-                )
-            }
+                }
             </a>
-                          
+
         </header>
     )
 }

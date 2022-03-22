@@ -13,24 +13,26 @@ const ProductList = ({ currentFilter }) => {
     return (
         <div className="row my-4 px-5">
             {
-                data.all_products.map(product => {
-                    if (currentFilter) {
-                        if (product.categories.includes(currentFilter)) {
+                data.all_products.map(
+                    (product, index) => {
+                        if (currentFilter) {
+                            if (product.categories.includes(currentFilter)) {
+                                return (
+                                    <div className="col-lg-4 mb-4" key={index}>
+                                        <Item product={product} />
+                                    </div>
+                                )
+                            }
+                        } else {
                             return (
-                                <div className="col-lg-4 mb-4">
+                                <div className="col-lg-4 mb-4" key={(Math.random() * 10).toFixed(3)}>
                                     <Item product={product} />
                                 </div>
                             )
                         }
-                    } else {
-                        return (
-                            <div className="col-lg-4 mb-4">
-                                <Item product={product} />
-                            </div>
-                        )
-                    }
 
-                })
+                    }
+                )
             }
         </div>
     );

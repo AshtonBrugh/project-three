@@ -27,7 +27,7 @@
     min-width: 80px;
   }
   .sidebar .pro-sidebar-inner {
-    background: transparent;
+    background: #fff;
     box-shadow: 0.5px 0.866px 2px 0px rgba(0, 0, 0, 0.15);
   }
   .sidebar .pro-sidebar-inner .pro-sidebar-layout {
