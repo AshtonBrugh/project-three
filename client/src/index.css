@@ -102,12 +102,22 @@ code {
   display: flex;
   list-style: none;
   font-style: none;
-  margin-left: 4vw;
+  margin-left: 7vw;
 }
 
 .nav-li {
   padding-right: 3vw;
   
+}
+
+.user-profile {
+  text-decoration: none;
+  font-size: 1.8vw;
+  color: black;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-left: 17vw;
 }
 
 /* Nav/Header Styling End */
