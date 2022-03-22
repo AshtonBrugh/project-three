@@ -3,6 +3,7 @@
     --theme-card-main: rgba(0,0,0,0.05);
     --theme-card-border-main: rgba(0,0,0,0.25);
     --theme-card-footer-text: rgba(0,0,0,0.5);
+    width: 98%;
 }
 
 body {
