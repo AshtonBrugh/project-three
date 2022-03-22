@@ -1,7 +1,7 @@
 import { useMutation } from '@apollo/client';
 import React from 'react';
-import { ADD_PRODUCT } from '../../utils/mutations';
-import Home from '../pages/Home';
+import { QUERY_ADD_PRODUCT } from '../../utils/mutations';
+import Browse from '../pages/Browse.js'
 
 const Test = () => {
     const itemSeed = [
@@ -31,7 +31,7 @@ const Test = () => {
         }
     ]
 
-    const [addItem, { error }] = useMutation(ADD_PRODUCT);
+    const [addItem, { error }] = useMutation(QUERY_ADD_PRODUCT);
     let i = 0;
 
     const handleProductAdd = async e => {
@@ -55,7 +55,7 @@ const Test = () => {
     }
 
     const renderPage = () => {
-        return (<><span>{error.message}</span><Home /></>)
+        return (<><span>{error.message}</span><Browse /></>)
     }
 
     return (

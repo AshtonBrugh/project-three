@@ -1,12 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AuthService from "../utils/auth";
-import { RouteProps } from "react-router";
 
 import Footer from './footer';
 import RegisterLogin from './RegisterLogin';
 import Nav from './Nav';
-import Home from "./pages/Home";
 import Browse from "./pages/Browse";
 import Profile from "./pages/Profile";
 import Post from "./pages/Post";
@@ -22,12 +20,12 @@ export default function PageContainer() {
             <Router>
                 <>
                     <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
-                    
-                      
+
+
                     <Routes>
-                        <Route path='/' element={<Home />} />
+                        <Route path='/' element={<Browse />} />
                         <Route path='/login' element={<RegisterLogin />} />
-                        <Route path='/browse' element={<Browse />} />
+                        <Route path='/home' element={<Browse />} />
                         <Route path='/profile' element={<Profile />} />
                         <Route path='/profile/activelistings' element={<Profile />} />
                         <Route path='/profile/activeoffers' element={<Profile />} />
@@ -40,7 +38,7 @@ export default function PageContainer() {
                 </>
             </Router>
             <div className="spacer"></div>
-            <span> 
+            <span>
                 Logged In: {AuthService.loggedIn().toString()}
             </span>
             <Footer />

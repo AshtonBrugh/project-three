@@ -1,20 +1,21 @@
 import React from "react";
+import { useQuery } from "@apollo/client";
+import { QUERY_ME } from "../utils/queries";
 import AuthService from '../utils/auth'
 
 function Nav({ currentPage, handlePageChange }) {
 
+    const { loading, error, data } = useQuery(QUERY_ME);
+    if (loading) return 'Loading...';
     return (
         <header className="nav-block gradient-text">
-            <a href="/home" onClick={() => handlePageChange('home')} className='nav-item'>
+            <a href="/" onClick={() => handlePageChange('home')} className='nav-item'>
                 <h1 className="gradient-text heading">FiveFires</h1>
             </a>
             <nav className='nav'>
                 <ul className="nav-ul">
                     <li className='nav-li'>
-                        <a href="/browse" onClick={() => handlePageChange('browse')} className='nav-item'>Browse</a>
-                    </li>
-                    <li className='nav-li'>
-                        <a href="/profile" onClick={() => handlePageChange('profile')} className='nav-item'>Profile</a>
+                        <a href="/home" onClick={() => handlePageChange('browse')} className='nav-item'>Browse</a>
                     </li>
                     <li className='nav-li'>
                         <a href="/post" onClick={() => handlePageChange('post')} className='nav-item'>Post Listing</a>
@@ -37,6 +38,21 @@ function Nav({ currentPage, handlePageChange }) {
                     </li>
                 </ul>
             </nav>
+            <a href="/profile" onClick={() => handlePageChange('profile')} className='user-profile'>
+            {
+                'Welcome, '+
+                (loading?
+                    (
+                        'User'
+                    )
+                    :
+                    (
+                        data.me.username
+                    )
+                )
+            }
+            </a>
+                          
         </header>
     )
 }
