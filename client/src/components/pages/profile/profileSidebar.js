@@ -16,7 +16,7 @@ import { BiCog } from "react-icons/bi";
 
 
 import "react-pro-sidebar/dist/css/styles.css";
-import "./pages/css/sidebar.css";
+import "./css/sidebar.css";
 
 
 

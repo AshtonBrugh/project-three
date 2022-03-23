@@ -7,7 +7,12 @@ export const QUERY_ALL_PRODUCTS = gql`
             title
             description
             image
-            username
+            userid
+            postdate
+            salestart
+            salelength
+            startingprice
+            categories
             reviews {
                 content
                 username
@@ -17,34 +22,27 @@ export const QUERY_ALL_PRODUCTS = gql`
 `;
 
 export const QUERY_PRODUCT = gql`
-  query product($id: ID) {
-    product(_id: $id) {
-      _id
-      title
-      description
-      image
-      username
-      reviews {
-        content
-        username
-      }
+    query product($id: ID) {
+        product(_id: $id) {
+            _id
+            title
+            description
+            image
+            categories
+            reviews {
+                content
+                username
+            }
+        }
     }
-  }
-  `;
+`;
 
 export const QUERY_ME = gql`
-  {
-    me {
-      _id
-      username
-      email
-      products {
-        _id
-        title
-        description
-        image
-        username
-      }
+    query me{
+        me {
+            _id
+            username
+            email
+        }
     }
-  }
-  `;
+`;

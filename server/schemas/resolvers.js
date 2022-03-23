@@ -8,7 +8,7 @@ const resolvers = {
             if (context.user) {
                 const userData = await User.findOne({ _id: context.user._id })
                     .select('-__v -password')
-
+                console.log('resolvers.js_me():> ', userData)
                 return userData;
             }
             throw new AuthenticationError('Not logged in!')
@@ -57,9 +57,19 @@ const resolvers = {
             return { token, user };
         },
         addProduct: async (parent, args, context) => {
+            const { title, description, image, salestart, salelength, startingprice, categories } = args;
             console.log('[resolvers.addProduct()]> context.user', context.user);
             if (context.user) {
-                const product = await Product.create({ ...args, username: context.user.username });
+                const product = await Product.create({
+                    title,
+                    description,
+                    image,
+                    userid: context.user._id,
+                    salestart,
+                    salelength,
+                    startingprice,
+                    categories
+                });
 
                 const updatedUser = await User.findByIdAndUpdate(
                     { _id: context.user._id },
