@@ -6,12 +6,17 @@
         "title": "Item Sample 1",
         "description": "Sample item number 1",
         "image": "https://baconmockup.com/300/200",
-        "username": "Admin",
         "categories": [
             "jackets",
             "shoes",
             "desktops"
-        ]
+        ],
+        "userid": {
+            "$oid": "6238fdeaa2d0de5e2b913ee5"
+        },
+        "postdate": "Sat Jan 01 2022 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "currentbid": 0,
+        "currentbid_userid": null
     },
     {
         "_id": {
@@ -20,12 +25,17 @@
         "title": "Item Sample 2",
         "description": "Sample item number 2",
         "image": "https://baconmockup.com/301/200",
-        "username": "Admin",
         "categories": [
             "comfort",
             "gym-equip",
             "laptops"
-        ]
+        ],
+        "userid": {
+            "$oid": "6238fdeaa2d0de5e2b913ee5"
+        },
+        "postdate": "Sat Jan 01 2022 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "currentbid": 0,
+        "currentbid_userid": null
     },
     {
         "_id": {
@@ -38,7 +48,13 @@
         "categories": [
             "surround-sound",
             "monitors"
-        ]
+        ],
+        "userid": {
+            "$oid": "6238fdeaa2d0de5e2b913ee5"
+        },
+        "postdate": "Sat Jan 01 2022 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "currentbid": 0,
+        "currentbid_userid": null
     },
     {
         "_id": {
@@ -47,11 +63,16 @@
         "title": "Item Sample 4",
         "description": "Sample item number 4",
         "image": "https://baconmockup.com/301/201",
-        "username": "Admin",
         "categories": [
             "desktops",
             "video-games"
-        ]
+        ],
+        "userid": {
+            "$oid": "6238fdeaa2d0de5e2b913ee5"
+        },
+        "postdate": "Sat Jan 01 2022 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "currentbid": 0,
+        "currentbid_userid": null
     },
     {
         "_id": {
@@ -60,10 +81,15 @@
         "title": "Item Sample 5",
         "description": "Sample item number 5",
         "image": "https://baconmockup.com/301/202",
-        "username": "Admin",
         "categories": [
             "video-games",
             "laptops"
-        ]
+        ],
+        "userid": {
+            "$oid": "6238fdf1a2d0de5e2b913ee7"
+        },
+        "postdate": "Sat Jan 01 2022 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "currentbid": 0,
+        "currentbid_userid": null
     }
 ]
