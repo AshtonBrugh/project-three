@@ -54,21 +54,21 @@ const Post = () => {
     };
 
     const handlePriceChange = event => {
-        console.log('event.target', event.target)
+        //console.log('event.target', event.target)
         if (event.target) {
             setProductStartingPrice(event.target.value);
         }
     };
 
     const handleStartChange = event => {
-        console.log('event.target', event.target.value)
+        //console.log('event.target', event.target.value)
         if (event.target.value) {
             setProductSaleStart(event.target.value);
         }
     };
 
     const handleEndChange = event => {
-        console.log('event.target', event.target.value)
+        //console.log('event.target', event.target.value)
         if (event.target.value) {
             setProductSaleEnd(event.target.value);
         }

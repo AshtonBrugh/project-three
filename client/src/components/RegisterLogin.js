@@ -18,8 +18,6 @@ const RegisterLogin = () => {
         }
     }
 
-    console.log('currentPage', currentPage.toLowerCase())
-
     return (
         <>
             <div className='w-50 mx-auto'>

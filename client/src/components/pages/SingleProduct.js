@@ -5,7 +5,7 @@ import { QUERY_PRODUCT, QUERY_ME } from '../../utils/queries';
 import { UPDATE_CURRENT_BID } from '../../utils/mutations'
 
 const SingleProduct = () => {
-    const dev = true;
+    const dev = false;
     const { id: productId } = useParams();
     const { loadingMe, errorMe, dataMe } = useQuery(QUERY_ME);
     const [updateBid, { errorBid }] = useMutation(UPDATE_CURRENT_BID);
@@ -35,19 +35,19 @@ const SingleProduct = () => {
 
         const handleBidConfirm = async (e) => {
             const bid = document.getElementById('max-bid').value;
-            console.log('product.currentBid <= bid', product.currentBid <= bid)
-            console.log('bid', bid)
-            console.log('product.currentbid', product.currentbid)
+            //console.log('product.currentBid <= bid', product.currentBid <= bid)
+            //console.log('bid', bid)
+            //console.log('product.currentbid', product.currentbid)
             if (product.currentbid <= bid) {
-                console.log('productid', product._id)
-                console.log('bid', bid)
+                //console.log('productid', product._id)
+                //console.log('bid', bid)
                 const updatedProduct = await updateBid({
                     variables: {
                         productid: product._id,
                         currentbid: bid
                     }
                 });
-                console.log(updatedProduct);
+                //console.log(updatedProduct);
                 setCurrentBid(updatedProduct.currentbid);
                 setMinBid((updatedProduct.currentbid * 1.01) + 0.01);
                 renderPage();
