@@ -6,6 +6,10 @@ import ReviewList from './profile/reviewList';
 import Settings from './profile/Settings';
 import RegisterLogin from '../RegisterLogin';
 
+import { useQuery } from "@apollo/client";
+import { QUERY_ME } from '../../utils/queries'
+import AuthService from '../../utils/auth';
+
 import './css/profile.css';
 
 const Profile = () => {
@@ -26,11 +30,7 @@ const Profile = () => {
                         </div>
                         <div className='profile-item'>
                             <h3>Email</h3>
-                            <p>(email adress)</p>
-                        </div>
-                        <div className='profile-item'>
-                            <h3>Password</h3>
-                            <button className='button'>Reset Password</button>
+                            <p>(email address)</p>
                         </div>
                     </div>
 
