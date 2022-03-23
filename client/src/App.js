@@ -1,26 +1,33 @@
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
-import Signup from './pages/Signup';
-import Login from './pages/Login';
+import PageContainer from './components/PageContainer';
+import { setContext } from '@apollo/client/link/context';
 
 const httpLink = createHttpLink({
-  uri: '/graphql'
+  uri: '/graphql',
+});
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem('id_token');
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
 });
 
 const client = new ApolloClient({
-  link: httpLink,
+  link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
 
 
 function App() {
-  return (
-    <ApolloProvider client={client}>
-    <div className="App">
-      <Signup/>
-      <Login />
-    </div>
-    </ApolloProvider>
-  );
+    return (
+        <ApolloProvider client={client}>
+            <PageContainer />
+        </ApolloProvider>
+    );
 }
 
 export default App;

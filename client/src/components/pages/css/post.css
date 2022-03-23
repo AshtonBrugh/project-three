@@ -1,0 +1,73 @@
+textarea{resize: none !important;}
+
+textarea:hover, input:hover {
+    transition: all 400ms ease;
+    border-color: red;
+       
+}
+
+
+.input-area {
+    width: 90%;
+    margin: 1rem;
+    padding: .5rem;
+    border-radius: .5rem;
+    border: 1px solid black;
+}
+
+.input-container {
+    padding: 3rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.input-form {
+    border: 3px solid black;
+    border-radius: .75rem;
+}
+
+.input-title {
+    margin-top: .5rem;
+}
+
+.button {
+    margin: 1rem;
+    margin-bottom: 4rem;
+    background: linear-gradient(180deg, #E21143, #FFB03A);
+    padding: .35rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: 1px solid transparent;
+    border-radius: .5rem;
+    font-weight: 400;
+}
+
+button:hover {
+    transition: all 500ms ease;
+    background: linear-gradient(90deg, #E21143, #FFB03A);
+    color: white;
+}
+
+input#file-input {
+    display: none;
+}
+
+input#file-input + label {
+    background: linear-gradient(180deg, #E21143, #FFB03A);
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding: .4rem;
+    border: 1px solid transparent;
+    border-radius: .5rem;
+}
+
+input#file-input + label:hover {
+    transition: all 400ms ease;
+    background: linear-gradient(90deg, #E21143, #FFB03A);
+    color: white;
+}
+
+.icon {
+    margin-top: 4rem;
+}
+

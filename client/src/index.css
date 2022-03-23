@@ -1,3 +1,11 @@
+/* General Styling Start */
+#root{
+    --theme-card-main: rgba(0,0,0,0.05);
+    --theme-card-border-main: rgba(0,0,0,0.25);
+    --theme-card-footer-text: rgba(0,0,0,0.5);
+    width: 98%;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +13,219 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(0deg, rgba(255, 81, 0, 0.438) 0%, rgba(255,255,100,0.25) 35%, rgba(255,255,255,0.25) 60%);
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.product-descrption > textarea{
+ resize: none;
+ margin-top: 10;
+}
+
+.spacer {
+  height: 6vw;
+}
+
+.sidebar-spacer {
+    float: left;
+    height: 100vh;
+    width: 215px;
+}
+
+a:hover, .pro-inner-item:hover, .pro-inner-item:focus {
+    color:rgb(255, 85, 7) !important;
+    text-shadow: 0 0 10px rgb(255, 230, 0) !important;
+}
+
+.auction-active {
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5)
+}
+
+.auction-expired {
+  background-color: rgba(255, 0, 0, 0.2);
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+
+/* General Styling End */
+
+/* Login/Signup Styling Start */
+
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 4vw;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    margin: 2vw;
+    padding: .5vw;
+    border-radius: 4px;
+}
+
+.border-red {
+    border: 1px solid red;
+}
+
+.border-blue {
+    border: 1px solid blue;
+}
+
+
+/* Login/Signup Styling End */
+
+
+/* Nav/Header Styling Start */
+
+.gradient-text {
+  background-image: linear-gradient(180deg, #E21143, #FFB03A);
+  background-clip: text;
+  color: transparent;
+}
+
+.heading {
+  font-size: 5vw;
+  padding-right: 5vw;
+}
+
+.nav-item {
+  text-decoration: none;
+  font-size: 1.8vw;
+  color: black;
+  cursor: pointer;
+}
+
+.nav-block {
+  display: flex;
+  justify-content: flex-start;
+  top: 0;
+  width: 100%;
+  z-index: 200;
+  margin-left: 2vw;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 22vw;
+  margin: 0 1.5vw 0 1.5vw;
+}
+
+.nav-ul {
+  display: flex;
+  list-style: none;
+  font-style: none;
+  margin-left: 7vw;
+}
+
+.nav-li {
+  padding-right: 3vw;
+  
+}
+
+.user-profile {
+  text-decoration: none;
+  font-size: 1.8vw;
+  color: black;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-left: 17vw;
+}
+
+/* Nav/Header Styling End */
+
+
+/* Homepage Styling Start */
+
+.home-container {
+  display: flex;
+}
+
+/* Homepage Styling End */
+
+
+/* Browse Page Styling Start */
+
+.browse-container {
+  display: flex;
+}
+
+/* Browse Page Styling End */
+
+
+/* Profile Styling Start */
+
+.profile-containers {
+  position: relative;
+  width: auto;
+  margin-left: 250px;
+}
+
+.profile-headers {
+margin-bottom: 80px;
+}
+
+/* Profile Styling End */
+
+
+/* Post Listing Styling Start */
+
+.post-container {
+  display: flex;
+}
+
+.title-label {
+    position: relative !important;
+    top: -40px !important;
+    right: -100px !important;
+}
+
+.description-label {
+    position: relative !important;
+    top: -50px !important;
+    right: -100px !important;
+}
+
+.timers {
+  display: flex;
+  flex-direction: column;
+}
+
+.timer {
+  margin: 1vw;
+}
+
+/* Post Listing Styling End */
+
+
+/* Footer Styling Start */
+
+.footer {
+    margin-top: 60px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    padding: 10px 0 10px 0;
+    display: flex;
+    justify-content: end;
+}
+
+.footer-text {
+    font-size: 1vw;
+}
+
+/* Footer Styling End */

@@ -1,0 +1,150 @@
+[
+    {
+        "_id": {
+            "$oid": "6238ed43a1c68a054a6a68f5"
+        },
+        "title": "Item Sample 1",
+        "description": "Sample item number 1",
+        "image": "https://baconmockup.com/300/200",
+        "categories": [
+            "jackets",
+            "shoes",
+            "desktops"
+        ],
+        "postdate": "3/22/2022 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "salestart": "3/23/2022 11:00:00 GMT-0500 (Eastern Standard Time)",
+        "saleend": "3/23/2022 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "currentbid": 0,
+        "currentbid_userid": null,
+        "seller": {
+            "_id": {
+                "$oid": "6238e04441a1fad8c6b8d3ec"
+            },
+            "username": "user",
+            "email": "user@email.com ",
+            "password ": "$10$doCHlXTTV3.iFP2OF0HGqeUXcT2zSU4RdINXAHTzKjHz9jBjBkJLO ",
+            "products ": [
+                ""
+            ],
+            "__v ": "0"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "6238eda7a1c68a054a6a68f7"
+        },
+        "title": "Item Sample 2",
+        "description": "Sample item number 2",
+        "image": "https://baconmockup.com/301/200",
+        "categories": [
+            "comfort",
+            "gym-equip",
+            "laptops"
+        ],
+        "seller": {
+            "_id": {
+                "$oid": "6238e04441a1fad8c6b8d3ec"
+            },
+            "username": "user",
+            "email": "user@email.com ",
+            "password ": "$10$doCHlXTTV3.iFP2OF0HGqeUXcT2zSU4RdINXAHTzKjHz9jBjBkJLO ",
+            "products ": [
+                ""
+            ],
+            "__v ": "0"
+        },
+        "postdate": "3/22/2022 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "salestart": "3/23/2022 11:00:00 GMT-0500 (Eastern Standard Time)",
+        "saleend": "3/23/2022 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "currentbid": 0,
+        "currentbid_userid": null
+    },
+    {
+        "_id": {
+            "$oid": "6238eda7a1c68a054a6a68f8"
+        },
+        "title": "Item Sample 3",
+        "description": "Sample item number 3",
+        "image": "https://baconmockup.com/300/201",
+        "username": "Admin",
+        "categories": [
+            "surround-sound",
+            "monitors"
+        ],
+        "seller": {
+            "_id": {
+                "$oid": "6238e04441a1fad8c6b8d3ec"
+            },
+            "username": "user",
+            "email": "user@email.com ",
+            "password ": "$10$doCHlXTTV3.iFP2OF0HGqeUXcT2zSU4RdINXAHTzKjHz9jBjBkJLO ",
+            "products ": [
+                ""
+            ],
+            "__v ": "0"
+        },
+        "postdate": "3/22/2022 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "salestart": "3/23/2022 11:00:00 GMT-0500 (Eastern Standard Time)",
+        "saleend": "3/23/2022 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "currentbid": 0,
+        "currentbid_userid": null
+    },
+    {
+        "_id": {
+            "$oid": "6238eda7a1c68a054a6a68f9"
+        },
+        "title": "Item Sample 4",
+        "description": "Sample item number 4",
+        "image": "https://baconmockup.com/301/201",
+        "categories": [
+            "desktops",
+            "video-games"
+        ],
+        "seller": {
+            "_id": {
+                "$oid": "6238e04441a1fad8c6b8d3ec"
+            },
+            "username": "user",
+            "email": "user@email.com ",
+            "password ": "$10$doCHlXTTV3.iFP2OF0HGqeUXcT2zSU4RdINXAHTzKjHz9jBjBkJLO ",
+            "products ": [
+                ""
+            ],
+            "__v ": "0"
+        },
+        "postdate": "3/22/2022 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "salestart": "3/23/2022 11:00:00 GMT-0500 (Eastern Standard Time)",
+        "saleend": "3/23/2022 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "currentbid": 0,
+        "currentbid_userid": null
+    },
+    {
+        "_id": {
+            "$oid": "6238eda7a1c68a054a6a68fa"
+        },
+        "title": "Item Sample 5",
+        "description": "Sample item number 5",
+        "image": "https://baconmockup.com/301/202",
+        "categories": [
+            "video-games",
+            "laptops"
+        ],
+        "seller": {
+            "_id": {
+                "$oid": "6238e04441a1fad8c6b8d3ec"
+            },
+            "username": "user",
+            "email": "user@email.com ",
+            "password ": "$10$doCHlXTTV3.iFP2OF0HGqeUXcT2zSU4RdINXAHTzKjHz9jBjBkJLO ",
+            "products ": [
+                ""
+            ],
+            "__v ": "0"
+        },
+        "postdate": "3/22/2022 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "salestart": "3/23/2022 11:00:00 GMT-0500 (Eastern Standard Time)",
+        "saleend": "3/23/2022 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "currentbid": 0,
+        "currentbid_userid": null
+    }
+]

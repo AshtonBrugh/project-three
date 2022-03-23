@@ -1,25 +1,38 @@
 import decode from 'jwt-decode';
 
 class AuthService {
+
+    checkLogin() {
+        const thisToken = this.getToken();
+        if (thisToken) {
+            return !this.isTokenExpired(thisToken);
+        } else {
+            return false;
+        }
+    }
+
     getProfile() {
         return decode(this.getToken());
     }
 
     loggedIn() {
-        const token = this.getToken();
-        return !!token && this.isTokenExpired(token);
+        return this.checkLogin();
     }
 
     isTokenExpired(token) {
         try {
             const decoded = decode(token);
-            if (decoded.exp < Date.now() / 1000) {
+            if (decoded.exp < Date.now() / 1000) { // Checking if token is expired. N
                 return true;
-            } else return false;
-        } catch (err) {
+            }
+            else return false;
+
+        }
+        catch (err) {
             return false;
         }
     }
+
 
     getToken() {
         return localStorage.getItem('id_token');
@@ -27,13 +40,12 @@ class AuthService {
 
     login(idToken) {
         localStorage.setItem('id_token', idToken);
-
         window.location.assign('/');
     }
 
     logout() {
         localStorage.removeItem('id_token');
-        window.location.assign('/')
+        window.location.assign('/login')
     }
 };
 
