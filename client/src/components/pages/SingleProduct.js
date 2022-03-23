@@ -4,33 +4,37 @@ import { useQuery } from '@apollo/client';
 import { QUERY_PRODUCT } from '../../utils/queries';
 
 const SingleProduct = (props) => {
-   const { id: productId } = useParams();
+    const { id: productId } = useParams();
 
-   const { loading, data } = useQuery(QUERY_PRODUCT, {
-       variables: { id: productId},
-   });
+    const { loading, data } = useQuery(QUERY_PRODUCT, {
+        variables: { id: productId },
+    });
 
-       const product = data?.product || {};
+    const product = data?.product || {};
 
-       if (loading) {
-           return <div>Loading...</div>
-       }
+    if (loading) {
+        return <div>Loading...</div>
+    }
 
-       return (
-           <div>
-               <div className="card">
-                   <p className="card-head">
-                       <span style={{ fontWeight: 700 }} className="card-head h1">
-                           {product.title}
-                       </span>{' '}
-                   </p>
-                   <div className="card-body">
-                       <img src={product.image} alt={product.name}/>
-                       <p>{product.description}</p>
-                   </div>
-               </div>
-           </div>
-       )
+    return (
+        <div className="m-5">
+            <div className="card mb-3 auction-expired bg-warning bg-gradient bg-opacity-10" >
+                <div className="row g-0">
+                    <div className="col-md-4">
+                        <img src={product.image} className="img-fluid rounded-start" alt={product.name} />
+                    </div>
+                    <div className="col-md-8">
+                        <div className="card-body">
+                            <h5 className="card-title">{product.title}</h5>
+                            <p className="card-text">{product.description}</p>
+                            <a href="#" className="btn btn-primary position-absolute bottom-0 end-0 translate-middle disabled">Expired!</a>
+                            <p className="card-text"><small className="text-muted">{product.username}</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
 
 }
 

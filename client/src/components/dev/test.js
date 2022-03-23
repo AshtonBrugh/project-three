@@ -1,7 +1,7 @@
 import { useMutation } from '@apollo/client';
 import React from 'react';
 import { QUERY_ADD_PRODUCT } from '../../utils/mutations';
-import Home from '../pages/Home';
+import Browse from '../pages/Browse.js'
 
 const Test = () => {
     const itemSeed = [
@@ -55,7 +55,7 @@ const Test = () => {
     }
 
     const renderPage = () => {
-        return (<><span>{error.message}</span><Home /></>)
+        return (<><span>{error.message}</span><Browse /></>)
     }
 
     return (
