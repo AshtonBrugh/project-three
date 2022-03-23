@@ -7,6 +7,7 @@ const typeDefs = gql`
         username: String
         email: String
         products: [Product]
+        reviews: [Review]
     }
     type Auth {
         token: ID
@@ -27,7 +28,6 @@ const typeDefs = gql`
         description: String
         image: String
         username: String
-        reviews: [Review]
     }
 
     type Review {
@@ -49,7 +49,7 @@ const typeDefs = gql`
         login(email: String!, password: String!): Auth
         addUser(username: String!, email: String!, password: String!): Auth
         addProduct(title: String!, description: String!, image: String!, username: String!): Product
-        addReview(productId: ID!, content: String!): Product
+        addReview(content: String!, username: String!): User
     }
 
     type Auth {
