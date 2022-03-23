@@ -9,6 +9,7 @@
         "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
         "install": "cd server && npm i && cd ../client && npm i",
         "seed": "cd server && npm run seed",
+        "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\"",
         "build": "cd client && npm run build"
     },
     "keywords": [],
