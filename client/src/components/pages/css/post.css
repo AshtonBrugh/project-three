@@ -43,7 +43,7 @@ textarea:hover, input:hover {
 }
 
 button:hover {
-    transition: all 400ms ease;
+    transition: all 500ms ease;
     background: linear-gradient(90deg, #E21143, #FFB03A);
     color: white;
 }

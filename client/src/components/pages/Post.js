@@ -93,7 +93,6 @@ const Post = () => {
                         Post
                     </button>
                 </div>
-
             </form>
         </div>
     )
