@@ -9,7 +9,6 @@ import Browse from "./pages/Browse";
 import Profile from "./pages/Profile";
 import Post from "./pages/Post";
 import SingleProduct from "./pages/SingleProduct";
-import Test from "./dev/test";
 
 export default function PageContainer() {
 
@@ -32,7 +31,6 @@ export default function PageContainer() {
                         <Route path='/profile/reviewlist' element={<Profile />} />
                         <Route path='/profile/settings' element={<Profile />} />
                         <Route path='/post' element={<Post />} />
-                        <Route path='/dev' element={(<Test />)} />
                         <Route render={() => { return (<h1 className='display-2'>Wrong page!</h1>) }} />
                     </Routes>
                 </>

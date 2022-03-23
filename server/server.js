@@ -21,7 +21,7 @@ const startServer = async () => {
     });
     await server.start();
     server.applyMiddleware({ app });
-    console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
+    //console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
 };
 
 startServer();
@@ -32,6 +32,9 @@ app.use(express.json());
 // Serve up static assets
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '../client/build')));
+    +app.get('/*', function (req, res) {
+        res.sendFile(path.join(__dirname, 'build', 'index.html'));
+    });
 }
 
 db.once('open', () => {
