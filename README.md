@@ -37,7 +37,7 @@ To install, clone the respository onto your local computer and run npm install i
 github: https://github.com/CyanideTheJuggla <br>
 • Tre Rush <br>
 github: https://github.com/Rush0218 <br>
-• David Siedlarz
+• David Siedlarz <br>
 github: https://github.com/DSiedlarz90 <br>
 • Ashton Brugh <br>
 github: https://github.com/AshtonBrugh 
