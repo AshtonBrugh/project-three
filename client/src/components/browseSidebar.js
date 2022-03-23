@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import ProductList from './productList'
+import React from "react";
 
 import AuthService from "../utils/auth";
 
@@ -13,14 +12,12 @@ import {
     SidebarContent,
 } from "react-pro-sidebar";
 
-import { FaList, FaRegHeart, FaGem, FaHeart } from "react-icons/fa";
-import { FiHome, FiLogOut, FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
-import { RiPencilLine } from "react-icons/ri";
-import { BiCog } from "react-icons/bi";
+import { FaGem, FaHeart } from "react-icons/fa";
+import { FiLogOut } from "react-icons/fi";
 
 
 import "react-pro-sidebar/dist/css/styles.css";
-import "./pages/css/sidebar.css";
+import "./pages/profile/css/sidebar.css";
 
 
 
@@ -37,65 +34,65 @@ const BrowseSidebar = ({ currentFilter, setCurrentFilter }) => {
                         </div>
                     </SidebarHeader>
                     <SidebarContent>
-                    <Menu iconShape="square">
-                        <SubMenu title="Collectibles" icon={<FaGem />}>
-                            <SubMenu title="Trading Cards" icon={<FaHeart />}>
-                                <MenuItem>
-                                    <a onClick={() => setCurrentFilter('sports-cards')} /> Sports</MenuItem>
-                                <MenuItem>
-                                    <a onClick={() => setCurrentFilter('pokemon-cards')} /> Pokemon</MenuItem>
-                                <MenuItem>
-                                    <a onClick={() => setCurrentFilter('magic-cards')} />Magic the Gathering</MenuItem>
+                        <Menu iconShape="square">
+                            <SubMenu title="Collectibles" icon={<FaGem />}>
+                                <SubMenu title="Trading Cards" icon={<FaHeart />}>
+                                    <MenuItem>
+                                        <a onClick={() => setCurrentFilter('sports-cards')} /> Sports</MenuItem>
+                                    <MenuItem>
+                                        <a onClick={() => setCurrentFilter('pokemon-cards')} /> Pokemon</MenuItem>
+                                    <MenuItem>
+                                        <a onClick={() => setCurrentFilter('magic-cards')} />Magic the Gathering</MenuItem>
+                                </SubMenu>
+                                <SubMenu title="Toys" icon={<FaHeart />}>
+                                    <MenuItem>
+                                        <a onClick={() => setCurrentFilter('action-figures')} />Action Figures</MenuItem>
+                                    <MenuItem>
+                                        <a onClick={() => setCurrentFilter('plushies')} />Plushies</MenuItem>
+                                    <MenuItem>
+                                        <a onClick={() => setCurrentFilter('games')} />Games</MenuItem>
+                                </SubMenu>
                             </SubMenu>
-                            <SubMenu title="Toys" icon={<FaHeart />}>
-                                <MenuItem>
-                                    <a onClick={() => setCurrentFilter('action-figures')} />Action Figures</MenuItem>
-                                <MenuItem>
-                                    <a onClick={() => setCurrentFilter('plushies')} />Plushies</MenuItem>
-                                <MenuItem>
-                                    <a onClick={() => setCurrentFilter('games')} />Games</MenuItem>
+                        </Menu>
+                        <Menu iconShape="square">
+                            <SubMenu title="Clothing" icon={<FaGem />}>
+                                <SubMenu title="Outerwear" icon={<FaHeart />}>
+                                    <MenuItem>
+                                        <a onClick={() => setCurrentFilter('jackets')} />Jackets</MenuItem>
+                                    <MenuItem>
+                                        <a onClick={() => setCurrentFilter('shoes')} />Shoes</MenuItem>
+                                    <MenuItem>
+                                        <a onClick={() => setCurrentFilter('pants')} />Pants</MenuItem>
+                                </SubMenu>
+                                <SubMenu title="Underwear" icon={<FaHeart />}>
+                                    <MenuItem>
+                                        <a onClick={() => setCurrentFilter('panties')} />Panties</MenuItem>
+                                    <MenuItem>
+                                        <a onClick={() => setCurrentFilter('bras')} />Bras</MenuItem>
+                                    <MenuItem>
+                                        <a onClick={() => setCurrentFilter('socks')} />Socks</MenuItem>
+                                </SubMenu>
                             </SubMenu>
-                        </SubMenu>
-                    </Menu>
-                    <Menu iconShape="square">
-                        <SubMenu title="Clothing" icon={<FaGem />}>
-                            <SubMenu title="Outerwear" icon={<FaHeart />}>
-                                <MenuItem>
-                                    <a onClick={() => setCurrentFilter('jackets')} />Jackets</MenuItem>
-                                <MenuItem>
-                                    <a onClick={() => setCurrentFilter('shoes')} />Shoes</MenuItem>
-                                <MenuItem>
-                                    <a onClick={() => setCurrentFilter('pants')} />Pants</MenuItem>
+                        </Menu>
+                        <Menu iconShape="square">
+                            <SubMenu title="Music" icon={<FaGem />}>
+                                <SubMenu title="Instruments" icon={<FaHeart />}>
+                                    <MenuItem>
+                                        <a onClick={() => setCurrentFilter('guitar')} />Guitar</MenuItem>
+                                    <MenuItem>
+                                        <a onClick={() => setCurrentFilter('bass')} />Bass</MenuItem>
+                                    <MenuItem>
+                                        <a onClick={() => setCurrentFilter('drums')} />Drums</MenuItem>
+                                </SubMenu>
+                                <SubMenu title="Amplification" icon={<FaHeart />}>
+                                    <MenuItem>
+                                        <a onClick={() => setCurrentFilter('guitar-amps')} />Guitar Amps</MenuItem>
+                                    <MenuItem>
+                                        <a onClick={() => setCurrentFilter('bass-amps')} />Bass Amps</MenuItem>
+                                    <MenuItem>
+                                        <a onClick={() => setCurrentFilter('live-sound')} />Live Sound</MenuItem>
+                                </SubMenu>
                             </SubMenu>
-                            <SubMenu title="Underwear" icon={<FaHeart />}>
-                                <MenuItem>
-                                    <a onClick={() => setCurrentFilter('panties')} />Panties</MenuItem>
-                                <MenuItem>
-                                    <a onClick={() => setCurrentFilter('bras')} />Bras</MenuItem>
-                                <MenuItem>
-                                    <a onClick={() => setCurrentFilter('socks')} />Socks</MenuItem>
-                            </SubMenu>
-                        </SubMenu>
-                    </Menu>
-                    <Menu iconShape="square">
-                        <SubMenu title="Music" icon={<FaGem />}>
-                            <SubMenu title="Instruments" icon={<FaHeart />}>
-                                <MenuItem>
-                                    <a onClick={() => setCurrentFilter('guitar')} />Guitar</MenuItem>
-                                <MenuItem>
-                                    <a onClick={() => setCurrentFilter('bass')} />Bass</MenuItem>
-                                <MenuItem>
-                                    <a onClick={() => setCurrentFilter('drums')} />Drums</MenuItem>
-                            </SubMenu>
-                            <SubMenu title="Amplification" icon={<FaHeart />}>
-                                <MenuItem>
-                                    <a onClick={() => setCurrentFilter('guitar-amps')} />Guitar Amps</MenuItem>
-                                <MenuItem>
-                                    <a onClick={() => setCurrentFilter('bass-amps')} />Bass Amps</MenuItem>
-                                <MenuItem>
-                                    <a onClick={() => setCurrentFilter('live-sound')} />Live Sound</MenuItem>
-                            </SubMenu>
-                        </SubMenu>
                         </Menu>
                         <Menu iconShape="square">
                             <SubMenu title="Electronics" icon={<FaGem />}>
@@ -144,11 +141,11 @@ const BrowseSidebar = ({ currentFilter, setCurrentFilter }) => {
                                         (
                                             <a onClick={() => {
                                                 AuthService.logout();
-                                            }} className='pro-item-content'>Logout</a>
+                                            }} className='pro-item-content text-black'>Logout</a>
                                         )
                                         :
                                         (
-                                            <a href="/login" className='pro-item-content'>Log in</a>
+                                            <a href="/login" className='pro-item-content text-black'>Log in</a>
                                         )
 
                                 }

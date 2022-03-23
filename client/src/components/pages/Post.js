@@ -7,8 +7,6 @@ import { AiFillFire } from 'react-icons/ai'
 
 import './css/post.css';
 
-
-
 const Post = () => {
 
     const [productTitle, setProductTitle] = useState('');
@@ -40,9 +38,17 @@ const Post = () => {
         setProductImage([...event.target.files]);
     }
 
-    const handleChange = event => {
-        if (event.target.value.length <= 280) {
+    const handleDescriptionChange = event => {
+        console.log('event.target', event.target)
+        if (event.target.value.length <= 500) {
             setProductDescription(event.target.value);
+        }
+    };
+
+    const handleTitleChange = event => {
+        console.log('event.target', event.target)
+        if (event.target.value.length <= 255) {
+            setProductTitle(event.target.value);
         }
     };
 
@@ -76,14 +82,19 @@ const Post = () => {
                         <span id='file-name'><AiFillFire size={75} /></span>
                     </div>
                     <div className='upload'>
-                        <input type='file' id='file-input' onChange={imageChange} onSubmit={handleFormSubmit}></input>
-                        <label for='file-input'>Upload Image</label>
+                        <input type='file' id='file-input'
+                            onChange={imageChange} onSubmit={handleFormSubmit}></input>
+                        <label htmlFor='file-input'>Upload Image</label>
                     </div>
                     <div>
-                        <input className='input-area input-title' type='text' placeholder='Product Title' value={productTitle} onChange={handleChange} onSubmit={handleFormSubmit} ></input>
+                        <input className='input-area input-title' type='text' placeholder='Product Title' id='title-input'
+                            value={productTitle} onChange={handleTitleChange} onSubmit={handleFormSubmit} ></input>
+                        <label htmlFor='title-input' className={((productTitle.length < 225) ? 'text-success' : (productTitle.length < 250) ? 'text-warning' : 'text-danger') + ' title-label'}>{productTitle.length}/255</label>
                     </div>
                     <div>
-                        <textarea className="input-area" placeholder="Product Description" rows="5" value={productDescription} onSubmit={handleFormSubmit}></textarea>
+                        <textarea className="input-area" placeholder="Product Description" rows="5" id='description-text'
+                            value={productDescription} onChange={handleDescriptionChange} onSubmit={handleFormSubmit}></textarea>
+                        <label htmlFor='description-text' className={((productDescription.length < 400) ? 'text-success' : (productDescription.length < 495) ? 'text-warning' : 'text-danger') + ' description-label'}>{productDescription.length}/500</label>
                     </div>
                     <div>
 
