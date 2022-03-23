@@ -78,7 +78,7 @@ const Post = () => {
         event.preventDefault();
         try {
             await addProduct({
-                variables: { productTitle, productDescription, productImage }
+                variables: { productTitle, productDescription, productImage, productSaleStart, productSaleEnd, productStartingPrice }
             });
             setProductTitle('');
             setProductDescription('');
@@ -97,7 +97,7 @@ const Post = () => {
     //     let uploadedFile = event.target.files[0].name;
     //     fileName.textContent = uploadedFile;
     // })
-   
+
 
     return (
         <div className='container'>
@@ -128,10 +128,10 @@ const Post = () => {
                     </div>
                     <div className='timers'>
                         <label htmlFor="start-time">Choose a start time:</label>
-                        <input type="datetime-local" id="datefield" className="timer" value={productSaleStart} 
+                        <input type="datetime-local" id="datefield" className="timer" value={productSaleStart}
                             onChange={handleStartChange} onSubmit={handleFormSubmit}></input>
                         <label htmlFor="end-time">Choose a end time:</label>
-                        <input type="datetime-local" id="datefield" className="timer" value={productSaleEnd} name="end-time" 
+                        <input type="datetime-local" id="datefield" className="timer" value={productSaleEnd} name="end-time"
                             onChange={handleEndChange} onSubmit={handleFormSubmit}></input>
                     </div>
 

@@ -6,13 +6,36 @@ import ReviewList from './profile/reviewList';
 import Settings from './profile/Settings';
 import RegisterLogin from '../RegisterLogin';
 
+import './css/profile.css';
+
 const Profile = () => {
 
     const [currentPage, setCurrentPage] = React.useState('profile');
 
     const renderPage = () => {
         if (currentPage.toLowerCase().includes('profile')) {
-            return <h5>Coming Soon! </h5>;
+            return (
+                <div className='container profile-container'>
+                    <div>
+                        <h2 className='profile-title'>Profile</h2>
+                    </div>
+                    <div className='profile-items'>
+                        <div className='profile-item'>
+                            <h3>Username</h3>
+                            <p>(username)</p>
+                        </div>
+                        <div className='profile-item'>
+                            <h3>Email</h3>
+                            <p>(email adress)</p>
+                        </div>
+                        <div className='profile-item'>
+                            <h3>Password</h3>
+                            <button className='button'>Reset Password</button>
+                        </div>
+                    </div>
+
+                </div>
+            );
         }
         if (currentPage.toLowerCase().includes('activelistings')) {
             return <ActiveListings />;
