@@ -21,19 +21,23 @@ const Post = () => {
     const [addProduct, { error }] = useMutation(QUERY_ADD_PRODUCT, {
         update(cache, { data: { addProduct } }) {
             try {
-                const { products } = cache.readQuery({ query: QUERY_ALL_PRODUCTS });
+                const { products } = cache.readQuery({ query: QUERY_ADD_PRODUCT });
                 cache.writeQuery({
-                    query: QUERY_ALL_PRODUCTS,
+                    query: QUERY_ADD_PRODUCT,
                     data: { products: [addProduct, ...products] }
                 });
             } catch (e) {
-                console.error(e);
+                console.error('QUERY_ADD_PRODUCT', e);
             }
             const { me } = cache.readQuery({ query: QUERY_ME });
-            cache.writeQuery({
-                query: QUERY_ME,
-                data: { me: { ...me, products: [...me.products, addProduct] } }
-            });
+            try {
+                cache.writeQuery({
+                    query: QUERY_ME,
+                    data: { me: { ...me, products: [...me.products, addProduct] } }
+                });
+            } catch (e) {
+                console.error('QUERY_ME', e);
+            }
         }
     });
 
