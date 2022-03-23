@@ -65,3 +65,25 @@ export const ADD_REVIEW = gql`
     }
   }
 `;
+
+export const UPDATE_CURRENT_BID = gql`
+    mutation update_current_bid($productid: ID!, $currentbid: Float!){
+        update_current_bid(productid: $productid, currentbid: $currentbid){
+            _id
+            title
+            description
+            image
+            seller{
+                _id
+                username
+            }
+            postdate
+            salestart
+            saleend
+            startingprice
+            categories
+            currentbid
+            currentbid_userid
+        }
+    }
+`;

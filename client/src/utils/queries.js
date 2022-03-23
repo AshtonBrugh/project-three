@@ -13,19 +13,10 @@ export const QUERY_ALL_PRODUCTS = gql`
             }
             postdate
             salestart
-            salelength
+            saleend
             startingprice
             categories
-            checkactive{
-                active
-                start
-                end
-            }
-            username
-            reviews {
-                content
-                username
-            }
+            currentbid
         }
     }
 `;
@@ -43,19 +34,10 @@ export const QUERY_PRODUCT = gql`
             }
             postdate
             salestart
-            salelength
+            saleend
             startingprice
             categories
-            checkactive {
-                active
-                start
-                end
-            }
-            username
-            reviews {
-                content
-                username
-            }
+            currentbid
         }
     }
 `;

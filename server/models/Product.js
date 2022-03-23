@@ -28,12 +28,20 @@ const productSchema = new Schema(
         salestart: {
             type: String,
             required: true,
-            default: new Date(0, 0, 0, 24, 0, 0, 0)
+            default: () => {
+                const now = new Date();
+                now.setDate(now.getDate() + 1);
+                now.setHours(now.getHours() + 4);
+            }
         },
         saleend: {
             type: String,
             required: true,
-            default: new Date(0, 0, 0, 4, 0, 0, 0)
+            default: () => {
+                const now = new Date();
+                now.setDate(now.getDate() + 1);
+                now.setHours(now.getHours() + 4);
+            }
         },
         startingprice: {
             type: Number,

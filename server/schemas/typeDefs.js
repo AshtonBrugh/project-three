@@ -23,18 +23,10 @@ const typeDefs = gql`
         seller: User!
         postdate: String
         salestart: String
-        salelength: String
+        saleend: String
         startingprice: Float
-        reviews: [Review]
         categories: [String]
-        username: String
-        checkactive: ActiveAuction
-    }
-
-    type ActiveAuction {
-        active: Boolean
-        start: String
-        end: String
+        currentbid: Float
     }
 
     type Review {
@@ -57,6 +49,7 @@ const typeDefs = gql`
         addUser(username: String!, email: String!, password: String!): Auth
         addProduct(title: String!, description: String!, image: String!, username: String!): Product
         addReview(content: String!, username: String!): User
+        update_current_bid(productid: ID!, currentbid: Float!): Product
     }
 `;
 

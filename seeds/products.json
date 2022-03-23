@@ -13,7 +13,7 @@
         ],
         "postdate": "3/22/2022 00:00:00 GMT-0500 (Eastern Standard Time)",
         "salestart": "3/23/2022 11:00:00 GMT-0500 (Eastern Standard Time)",
-        "salelength": "3/23/2022 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "saleend": "3/23/2022 19:00:00 GMT-0500 (Eastern Standard Time)",
         "currentbid": 0,
         "currentbid_userid": null,
         "seller": {
@@ -55,7 +55,7 @@
         },
         "postdate": "3/22/2022 00:00:00 GMT-0500 (Eastern Standard Time)",
         "salestart": "3/23/2022 11:00:00 GMT-0500 (Eastern Standard Time)",
-        "salelength": "3/23/2022 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "saleend": "3/23/2022 19:00:00 GMT-0500 (Eastern Standard Time)",
         "currentbid": 0,
         "currentbid_userid": null
     },
@@ -85,7 +85,7 @@
         },
         "postdate": "3/22/2022 00:00:00 GMT-0500 (Eastern Standard Time)",
         "salestart": "3/23/2022 11:00:00 GMT-0500 (Eastern Standard Time)",
-        "salelength": "3/23/2022 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "saleend": "3/23/2022 19:00:00 GMT-0500 (Eastern Standard Time)",
         "currentbid": 0,
         "currentbid_userid": null
     },
@@ -114,7 +114,7 @@
         },
         "postdate": "3/22/2022 00:00:00 GMT-0500 (Eastern Standard Time)",
         "salestart": "3/23/2022 11:00:00 GMT-0500 (Eastern Standard Time)",
-        "salelength": "3/23/2022 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "saleend": "3/23/2022 19:00:00 GMT-0500 (Eastern Standard Time)",
         "currentbid": 0,
         "currentbid_userid": null
     },
@@ -143,7 +143,7 @@
         },
         "postdate": "3/22/2022 00:00:00 GMT-0500 (Eastern Standard Time)",
         "salestart": "3/23/2022 11:00:00 GMT-0500 (Eastern Standard Time)",
-        "salelength": "3/23/2022 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "saleend": "3/23/2022 19:00:00 GMT-0500 (Eastern Standard Time)",
         "currentbid": 0,
         "currentbid_userid": null
     }
