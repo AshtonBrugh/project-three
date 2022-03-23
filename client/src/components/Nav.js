@@ -18,7 +18,11 @@ function Nav({ currentPage, handlePageChange }) {
                         <a href="/home" onClick={() => handlePageChange('browse')} className='nav-item'>Browse</a>
                     </li>
                     <li className='nav-li'>
-                        <a href="/post" onClick={() => handlePageChange('post')} className='nav-item'>Post Listing</a>
+
+                        {
+                            AuthService.checkLogin() ?
+                                (<a href="/post" onClick={() => handlePageChange('post')} className='nav-item'>Post Listing</a>) : (<></>)
+                        }
                     </li>
                     <li className='nav-li'>
                         {
