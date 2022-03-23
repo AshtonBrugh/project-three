@@ -38,21 +38,26 @@ function Nav({ currentPage, handlePageChange }) {
                     </li>
                 </ul>
             </nav>
-            <a href="/profile" onClick={() => handlePageChange('profile')} className='user-profile'>
-            {
-                'Welcome, '+
-                (loading?
+            <a href="/profile" onClick={() => handlePageChange('profile')} className='nav-item align-self-center position-absolute pb-3' style={{ right: '1vw ' }}>
+                {
+                    'Welcome' +
                     (
-                        'User'
+                        (loading) ?
+                            (
+                                ', Guest!'
+                            )
+                            : (data) ?
+                                (
+                                    ', ' + data.me.username + '!'
+                                )
+                                :
+                                (
+                                    ', Guest!'
+                                )
                     )
-                    :
-                    (
-                        data.me.username
-                    )
-                )
-            }
+                }
             </a>
-                          
+
         </header>
     )
 }

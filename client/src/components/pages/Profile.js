@@ -1,9 +1,9 @@
 import React from 'react';
-import ProfileSidebar from '../profileSidebar.js';
-import ActiveListings from '../ActiveListings';
-import ActiveOffers from '../ActiveOffers';
-import ReviewList from '../reviewList';
-import Settings from '../Settings';
+import ProfileSidebar from './profile/profileSidebar.js';
+import ActiveListings from './profile/ActiveListings';
+import ActiveOffers from './profile/ActiveOffers';
+import ReviewList from './profile/reviewList';
+import Settings from './profile/Settings';
 import RegisterLogin from '../RegisterLogin';
 
 const Profile = () => {

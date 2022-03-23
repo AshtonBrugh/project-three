@@ -27,7 +27,7 @@ const SingleProduct = (props) => {
                         <div className="card-body">
                             <h5 className="card-title">{product.title}</h5>
                             <p className="card-text">{product.description}</p>
-                            <a href="#" className="btn btn-primary position-absolute bottom-0 end-0 translate-middle disabled">Expired!</a>
+                            <a href="#" className="btn btn-warning border-2 border-danger text-danger fw-bold position-absolute bottom-0 end-0 translate-middle disabled">Expired!</a>
                             <p className="card-text"><small className="text-muted">{product.username}</small></p>
                         </div>
                     </div>
