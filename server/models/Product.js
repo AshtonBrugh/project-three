@@ -31,11 +31,9 @@ const productSchema = new Schema(
             required: true,
             default: new Date(0, 0, 0, 24, 0, 0, 0)
         },
-        salelength: {
+        saleend: {
             type: Schema.Types.Date,
             required: true,
-            min: 0,
-            max: 300,
             default: new Date(0, 0, 0, 4, 0, 0, 0)
         },
         startingprice: {

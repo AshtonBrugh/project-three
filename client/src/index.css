@@ -199,6 +199,15 @@ margin-bottom: 80px;
     right: -100px !important;
 }
 
+.timers {
+  display: flex;
+  flex-direction: column;
+}
+
+.timer {
+  margin: 1vw;
+}
+
 /* Post Listing Styling End */
 
 

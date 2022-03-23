@@ -3,6 +3,7 @@ import { useMutation } from '@apollo/client';
 import { QUERY_ADD_PRODUCT } from '../../utils/mutations';
 import { QUERY_ALL_PRODUCTS, QUERY_ME } from '../../utils/queries';
 
+
 import { AiFillFire } from 'react-icons/ai'
 
 import './css/post.css';
@@ -12,7 +13,9 @@ const Post = () => {
     const [productTitle, setProductTitle] = useState('');
     const [productDescription, setProductDescription] = useState('');
     const [productImage, setProductImage] = useState('');
-
+    const [productSaleStart, setProductSaleStart] = useState('');
+    const [productSaleEnd, setProductSaleEnd] = useState('');
+    const [productStartingPrice, setProductStartingPrice] = useState('');
 
 
     const [addProduct, { error }] = useMutation(QUERY_ADD_PRODUCT, {
@@ -52,6 +55,27 @@ const Post = () => {
         }
     };
 
+    const handlePriceChange = event => {
+        console.log('event.target', event.target)
+        if (event.target) {
+            setProductStartingPrice(event.target.value);
+        }
+    };
+
+    const handleStartChange = event => {
+        console.log('event.target', event.target.value)
+        if (event.target.value) {
+            setProductSaleStart(event.target.value);
+        }
+    };
+
+    const handleEndChange = event => {
+        console.log('event.target', event.target.value)
+        if (event.target.value) {
+            setProductSaleEnd(event.target.value);
+        }
+    };
+
     const handleFormSubmit = async event => {
         event.preventDefault();
         try {
@@ -61,6 +85,9 @@ const Post = () => {
             setProductTitle('');
             setProductDescription('');
             setProductImage('');
+            setProductSaleStart('');
+            setProductSaleEnd('');
+            setProductStartingPrice('');
         } catch (e) {
             console.error(e);
         }
@@ -72,7 +99,7 @@ const Post = () => {
     //     let uploadedFile = event.target.files[0].name;
     //     fileName.textContent = uploadedFile;
     // })
-
+   
 
     return (
         <div className='container'>
@@ -92,12 +119,22 @@ const Post = () => {
                         <label htmlFor='title-input' className={((productTitle.length < 225) ? 'text-success' : (productTitle.length < 250) ? 'text-warning' : 'text-danger') + ' title-label'}>{productTitle.length}/255</label>
                     </div>
                     <div>
+                        <input type="number" className="input-area input-title" rows='1' placeholder='$0' id='price-text'
+                            value={productStartingPrice} onChange={handlePriceChange} onSubmit={handleFormSubmit}></input>
+                        <label htmlFor="price-input"></label>
+                    </div>
+                    <div>
                         <textarea className="input-area" placeholder="Product Description" rows="5" id='description-text'
                             value={productDescription} onChange={handleDescriptionChange} onSubmit={handleFormSubmit}></textarea>
                         <label htmlFor='description-text' className={((productDescription.length < 400) ? 'text-success' : (productDescription.length < 495) ? 'text-warning' : 'text-danger') + ' description-label'}>{productDescription.length}/500</label>
                     </div>
-                    <div>
-
+                    <div className='timers'>
+                        <label htmlFor="start-time">Choose a start time:</label>
+                        <input type="datetime-local" id="datefield" className="timer" value={productSaleStart} 
+                            onChange={handleStartChange} onSubmit={handleFormSubmit}></input>
+                        <label htmlFor="end-time">Choose a end time:</label>
+                        <input type="datetime-local" id="datefield" className="timer" value={productSaleEnd} name="end-time" 
+                            onChange={handleEndChange} onSubmit={handleFormSubmit}></input>
                     </div>
 
                     <button className="button" type="submit">
