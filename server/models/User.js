@@ -31,7 +31,8 @@ const userSchema = new Schema(
     },
     {
         toJSON: {
-            virtuals: true
+            virtuals: true,
+            getters: true
         }
     }
 );
@@ -41,7 +42,6 @@ userSchema.pre('save', async function (next) {
         const saltRounds = 10;
         this.password = await bcrypt.hash(this.password, saltRounds);
     }
-
     next();
 });
 
@@ -51,6 +51,5 @@ userSchema.methods.isCorrectPassword = async function (password) {
 };
 
 const User = model('User', userSchema);
-
 
 module.exports = User;

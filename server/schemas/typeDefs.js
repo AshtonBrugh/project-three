@@ -20,13 +20,21 @@ const typeDefs = gql`
         title: String
         description: String
         image: String
-        userid: ID!
+        seller: User!
         postdate: String
         salestart: String
         salelength: String
         startingprice: Float
         reviews: [Review]
         categories: [String]
+        username: String
+        checkactive: ActiveAuction
+    }
+
+    type ActiveAuction {
+        active: Boolean
+        start: String
+        end: String
     }
 
     type Review {

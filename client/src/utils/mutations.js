@@ -40,10 +40,19 @@ export const QUERY_ME = gql`
 export const QUERY_ADD_PRODUCT = gql`
     mutation addProduct($title: String!, $description: String!, $image: String!, $username: String!) {
         addProduct(title: $title, description: $description, image: $image, username: $username) {
+            _id
             title
             description
             image
+            userid
+            postdate
+            salestart
+            salelength
+            startingprice
+            reviews
+            categories
             username
+            checkactive
         }
     }
     `;

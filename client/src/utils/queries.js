@@ -7,12 +7,21 @@ export const QUERY_ALL_PRODUCTS = gql`
             title
             description
             image
-            userid
+            seller{
+                _id
+                username
+            }
             postdate
             salestart
             salelength
             startingprice
             categories
+            checkactive{
+                active
+                start
+                end
+            }
+            username
             reviews {
                 content
                 username
@@ -28,7 +37,21 @@ export const QUERY_PRODUCT = gql`
             title
             description
             image
+            seller{
+                _id
+                username
+            }
+            postdate
+            salestart
+            salelength
+            startingprice
             categories
+            checkactive {
+                active
+                start
+                end
+            }
+            username
             reviews {
                 content
                 username

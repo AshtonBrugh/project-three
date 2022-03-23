@@ -21,18 +21,17 @@ const productSchema = new Schema(
             minlength: 1,
             maxlength: 280
         },
-        userid: {
-            type: Schema.Types.ObjectId,
-            required: true,
-            ref: 'User'
+        seller: {
+            type: User,
+            required: true
         },
         salestart: {
-            type: Schema.Types.Date,
+            type: String,
             required: true,
             default: new Date(0, 0, 0, 24, 0, 0, 0)
         },
         salelength: {
-            type: Schema.Types.Date,
+            type: String,
             required: true,
             min: 0,
             max: 300,
@@ -44,7 +43,7 @@ const productSchema = new Schema(
             default: 0
         },
         postdate: {
-            type: Schema.Types.Date,
+            type: String,
             required: true,
             default: Date.now()
         },
@@ -67,17 +66,6 @@ const productSchema = new Schema(
         }
     }
 );
-
-productSchema.virtual('username').get(async function () {
-    const user = await User.findById(this.userid);
-    return user.username;
-});
-
-productSchema.virtual('checkActive').get(async function () {
-    const start = this.postdate + this.saleStart;
-    const end = start + this.salelength;
-    return { active: (Date.now() > start && Date.now() < end), start, end };
-});
 
 const Product = model('Product', productSchema);
 
