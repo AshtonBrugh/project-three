@@ -40,10 +40,19 @@ export const QUERY_ME = gql`
 export const QUERY_ADD_PRODUCT = gql`
     mutation addProduct($title: String!, $description: String!, $image: String!, $username: String!) {
         addProduct(title: $title, description: $description, image: $image, username: $username) {
+            _id
             title
             description
             image
+            userid
+            postdate
+            salestart
+            salelength
+            startingprice
+            reviews
+            categories
             username
+            checkactive
         }
     }
     `;
@@ -55,4 +64,26 @@ export const ADD_REVIEW = gql`
       username
     }
   }
+`;
+
+export const UPDATE_CURRENT_BID = gql`
+    mutation update_current_bid($productid: ID!, $currentbid: Float!){
+        update_current_bid(productid: $productid, currentbid: $currentbid){
+            _id
+            title
+            description
+            image
+            seller{
+                _id
+                username
+            }
+            postdate
+            salestart
+            saleend
+            startingprice
+            categories
+            currentbid
+            currentbid_userid
+        }
+    }
 `;

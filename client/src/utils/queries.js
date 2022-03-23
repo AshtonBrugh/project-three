@@ -7,16 +7,16 @@ export const QUERY_ALL_PRODUCTS = gql`
             title
             description
             image
-            userid
-            postdate
-            salestart
-            salelength
-            startingprice
-            categories
-            reviews {
-                content
+            seller{
+                _id
                 username
             }
+            postdate
+            salestart
+            saleend
+            startingprice
+            categories
+            currentbid
         }
     }
 `;
@@ -28,11 +28,16 @@ export const QUERY_PRODUCT = gql`
             title
             description
             image
-            categories
-            reviews {
-                content
+            seller{
+                _id
                 username
             }
+            postdate
+            salestart
+            saleend
+            startingprice
+            categories
+            currentbid
         }
     }
 `;

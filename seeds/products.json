@@ -11,12 +11,23 @@
             "shoes",
             "desktops"
         ],
-        "userid": {
-            "$oid": "6238fdeaa2d0de5e2b913ee5"
-        },
-        "postdate": "Sat Jan 01 2022 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "postdate": "3/22/2022 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "salestart": "3/23/2022 11:00:00 GMT-0500 (Eastern Standard Time)",
+        "saleend": "3/23/2022 19:00:00 GMT-0500 (Eastern Standard Time)",
         "currentbid": 0,
-        "currentbid_userid": null
+        "currentbid_userid": null,
+        "seller": {
+            "_id": {
+                "$oid": "6238e04441a1fad8c6b8d3ec"
+            },
+            "username": "user",
+            "email": "user@email.com ",
+            "password ": "$10$doCHlXTTV3.iFP2OF0HGqeUXcT2zSU4RdINXAHTzKjHz9jBjBkJLO ",
+            "products ": [
+                ""
+            ],
+            "__v ": "0"
+        }
     },
     {
         "_id": {
@@ -30,10 +41,21 @@
             "gym-equip",
             "laptops"
         ],
-        "userid": {
-            "$oid": "6238fdeaa2d0de5e2b913ee5"
+        "seller": {
+            "_id": {
+                "$oid": "6238e04441a1fad8c6b8d3ec"
+            },
+            "username": "user",
+            "email": "user@email.com ",
+            "password ": "$10$doCHlXTTV3.iFP2OF0HGqeUXcT2zSU4RdINXAHTzKjHz9jBjBkJLO ",
+            "products ": [
+                ""
+            ],
+            "__v ": "0"
         },
-        "postdate": "Sat Jan 01 2022 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "postdate": "3/22/2022 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "salestart": "3/23/2022 11:00:00 GMT-0500 (Eastern Standard Time)",
+        "saleend": "3/23/2022 19:00:00 GMT-0500 (Eastern Standard Time)",
         "currentbid": 0,
         "currentbid_userid": null
     },
@@ -49,10 +71,21 @@
             "surround-sound",
             "monitors"
         ],
-        "userid": {
-            "$oid": "6238fdeaa2d0de5e2b913ee5"
+        "seller": {
+            "_id": {
+                "$oid": "6238e04441a1fad8c6b8d3ec"
+            },
+            "username": "user",
+            "email": "user@email.com ",
+            "password ": "$10$doCHlXTTV3.iFP2OF0HGqeUXcT2zSU4RdINXAHTzKjHz9jBjBkJLO ",
+            "products ": [
+                ""
+            ],
+            "__v ": "0"
         },
-        "postdate": "Sat Jan 01 2022 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "postdate": "3/22/2022 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "salestart": "3/23/2022 11:00:00 GMT-0500 (Eastern Standard Time)",
+        "saleend": "3/23/2022 19:00:00 GMT-0500 (Eastern Standard Time)",
         "currentbid": 0,
         "currentbid_userid": null
     },
@@ -67,10 +100,21 @@
             "desktops",
             "video-games"
         ],
-        "userid": {
-            "$oid": "6238fdeaa2d0de5e2b913ee5"
+        "seller": {
+            "_id": {
+                "$oid": "6238e04441a1fad8c6b8d3ec"
+            },
+            "username": "user",
+            "email": "user@email.com ",
+            "password ": "$10$doCHlXTTV3.iFP2OF0HGqeUXcT2zSU4RdINXAHTzKjHz9jBjBkJLO ",
+            "products ": [
+                ""
+            ],
+            "__v ": "0"
         },
-        "postdate": "Sat Jan 01 2022 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "postdate": "3/22/2022 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "salestart": "3/23/2022 11:00:00 GMT-0500 (Eastern Standard Time)",
+        "saleend": "3/23/2022 19:00:00 GMT-0500 (Eastern Standard Time)",
         "currentbid": 0,
         "currentbid_userid": null
     },
@@ -85,10 +129,21 @@
             "video-games",
             "laptops"
         ],
-        "userid": {
-            "$oid": "6238fdf1a2d0de5e2b913ee7"
+        "seller": {
+            "_id": {
+                "$oid": "6238e04441a1fad8c6b8d3ec"
+            },
+            "username": "user",
+            "email": "user@email.com ",
+            "password ": "$10$doCHlXTTV3.iFP2OF0HGqeUXcT2zSU4RdINXAHTzKjHz9jBjBkJLO ",
+            "products ": [
+                ""
+            ],
+            "__v ": "0"
         },
-        "postdate": "Sat Jan 01 2022 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "postdate": "3/22/2022 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "salestart": "3/23/2022 11:00:00 GMT-0500 (Eastern Standard Time)",
+        "saleend": "3/23/2022 19:00:00 GMT-0500 (Eastern Standard Time)",
         "currentbid": 0,
         "currentbid_userid": null
     }

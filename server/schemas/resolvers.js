@@ -8,7 +8,6 @@ const resolvers = {
             if (context.user) {
                 const userData = await User.findOne({ _id: context.user._id })
                     .select('-__v -password')
-                console.log('resolvers.js_me():> ', userData)
                 return userData;
             }
             throw new AuthenticationError('Not logged in!')
@@ -58,7 +57,6 @@ const resolvers = {
         },
         addProduct: async (parent, args, context) => {
             const { title, description, image, salestart, salelength, startingprice, categories } = args;
-            console.log('[resolvers.addProduct()]> context.user', context.user);
             if (context.user) {
                 const product = await Product.create({
                     title,
@@ -76,8 +74,6 @@ const resolvers = {
                     { $push: { products: product._id } },
                     { new: true }
                 );
-                console.log('[resolvers.addProduct()]> updatedUser', updatedUser);
-                console.log('[resolvers.addProduct()]> product', product);
 
                 return product;
             }
@@ -97,6 +93,17 @@ const resolvers = {
 
             throw new AuthenticationError('You need to be logged in!');
         },
+        update_current_bid: async (parent, { productid, currentbid }, context) => {
+            console.log('context.user', context.user)
+            if (context.user) {
+                const updateProduct = await Product.findOneAndUpdate(
+                    { _id: productid },
+                    { currentbid, currentbid_userid: context.user._id },
+                    { new: true, runValidators: true }
+                );
+                return updateProduct;
+            } else throw new AuthenticationError('You need to be logged in!');
+        }
     }
 };
 
