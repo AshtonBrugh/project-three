@@ -42,14 +42,12 @@ const Post = () => {
     }
 
     const handleDescriptionChange = event => {
-        console.log('event.target', event.target)
         if (event.target.value.length <= 500) {
             setProductDescription(event.target.value);
         }
     };
 
     const handleTitleChange = event => {
-        console.log('event.target', event.target)
         if (event.target.value.length <= 255) {
             setProductTitle(event.target.value);
         }
