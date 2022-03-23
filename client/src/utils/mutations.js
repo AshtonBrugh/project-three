@@ -47,3 +47,12 @@ export const QUERY_ADD_PRODUCT = gql`
         }
     }
     `;
+
+export const ADD_REVIEW = gql`
+  mutation addReview($content: String!, $username: String!) {
+    addReview(content: $content, username: $username) {
+      content 
+      username
+    }
+  }
+`;
