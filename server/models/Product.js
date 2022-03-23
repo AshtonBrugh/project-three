@@ -21,12 +21,6 @@ const productSchema = new Schema(
             minlength: 1,
             maxlength: 280
         },
-<<<<<<< HEAD
-        username: {
-            type: String,
-            required: true
-<<<<<<< HEAD
-=======
         userid: {
             type: Schema.Types.ObjectId,
             required: true,
@@ -63,12 +57,8 @@ const productSchema = new Schema(
         currentbid_userid: {
             type: Schema.Types.ObjectId,
             ref: 'User'
->>>>>>> ff7405377e3e7742cecf53726a009c2bd822491a
         },
         categories: [{ type: String }]
-=======
-        }
->>>>>>> d80c04505a96e3d461d751c6c93c67dc1111fd64
     },
     {
         toJSON: {

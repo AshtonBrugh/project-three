@@ -39,6 +39,8 @@ function Nav({ currentPage, handlePageChange }) {
                 </ul>
             </nav>
             <a href="/profile" onClick={() => handlePageChange('profile')} className='nav-item align-self-center position-absolute pb-3' style={{ right: '1vw ' }}>
+                {console.log('loggedIn:', AuthService.checkLogin())}
+                {(loading) ? console.log('loading') : (data) ? console.log('data.me', data.me) : console.log('no data: ', data)}
                 {
                     'Welcome' +
                     (

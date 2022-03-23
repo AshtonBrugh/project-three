@@ -1,3 +1,4 @@
+
 const { gql } = require('apollo-server-express');
 
 
@@ -20,7 +21,6 @@ const typeDefs = gql`
         title: String
         description: String
         image: String
-        username: String
         userid: ID!
         postdate: String
         salestart: String
@@ -28,7 +28,6 @@ const typeDefs = gql`
         startingprice: Float
         reviews: [Review]
         categories: [String]
-
     }
 
     type Review {
@@ -51,7 +50,7 @@ const typeDefs = gql`
         addUser(username: String!, email: String!, password: String!): Auth
         addProduct(title: String!, description: String!, image: String!, username: String!): Product
         addReview(content: String!, username: String!): User
-    }
+    } 
 `;
 
 module.exports = typeDefs;

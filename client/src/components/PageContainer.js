@@ -1,3 +1,4 @@
+
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AuthService from "../utils/auth";
@@ -38,9 +39,6 @@ export default function PageContainer() {
                 </>
             </Router>
             <div className="spacer"></div>
-            <span>
-                Logged In: {AuthService.loggedIn().toString()}
-            </span>
             <Footer />
         </>
     );

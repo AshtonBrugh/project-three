@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { QUERY_ADD_PRODUCT } from '../../utils/mutations';
@@ -108,6 +109,5 @@ const Post = () => {
         </div>
     )
 }
-
 
 export default Post;

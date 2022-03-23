@@ -7,7 +7,11 @@ export const QUERY_ALL_PRODUCTS = gql`
             title
             description
             image
-            username
+            userid
+            postdate
+            salestart
+            salelength
+            startingprice
             categories
             reviews {
                 content
@@ -39,13 +43,6 @@ export const QUERY_ME = gql`
             _id
             username
             email
-            products {
-                _id
-                title
-                description
-                image
-                username
-            }
         }
     }
 `;

@@ -5,6 +5,8 @@
     "proxy": "http://localhost:3002",
     "dependencies": {
         "@apollo/client": "^3.5.10",
+        "@stripe/react-stripe-js": "^1.7.0",
+        "@stripe/stripe-js": "^1.25.0",
         "@testing-library/jest-dom": "^5.16.2",
         "@testing-library/react": "^12.1.4",
         "@testing-library/user-event": "^13.5.0",

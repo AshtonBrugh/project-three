@@ -1,57 +1,57 @@
 /* General Styling Start */
 #root{
-    --theme-card-main: rgba(0,0,0,0.05);
-    --theme-card-border-main: rgba(0,0,0,0.25);
-    --theme-card-footer-text: rgba(0,0,0,0.5);
-    width: 98%;
+  --theme-card-main: rgba(0,0,0,0.05);
+  --theme-card-border-main: rgba(0,0,0,0.25);
+  --theme-card-footer-text: rgba(0,0,0,0.5);
+  width: 98%;
 }
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(0deg, rgba(255,148,100,0.25) 0%, rgba(255,255,100,0.25) 35%, rgba(255,255,255,0.25) 70%);
-  background-repeat: no-repeat;
-  background-size: 100vw 100vh;
-  background-attachment: fixed;
+margin: 0;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+background-image: linear-gradient(0deg, rgba(255, 81, 0, 0.438) 0%, rgba(255,255,100,0.25) 35%, rgba(255,255,255,0.25) 60%);
+background-repeat: no-repeat;
+background-size: 100vw 100vh;
+background-attachment: fixed;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
 }
 
 
 .product-descrption > textarea{
- resize: none;
- margin-top: 10;
+resize: none;
+margin-top: 10;
 }
 
 .spacer {
-  height: 6vw;
+height: 6vw;
 }
 
 .sidebar-spacer {
-    float: left;
-    height: 100vh;
-    width: 215px;
+  float: left;
+  height: 100vh;
+  width: 215px;
 }
 
 a:hover, .pro-inner-item:hover, .pro-inner-item:focus {
-    color:rgb(255, 85, 7) !important;
-    text-shadow: 0 0 10px rgb(255, 230, 0) !important;
+  color:rgb(255, 85, 7) !important;
+  text-shadow: 0 0 10px rgb(255, 230, 0) !important;
 }
 
 .auction-active {
-  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5)
+box-shadow: 0 0 20px rgba(0, 255, 0, 0.5)
 }
 
 .auction-expired {
-  background-color: rgba(255, 0, 0, 0.2);
-  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+background-color: rgba(255, 0, 0, 0.2);
+box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
 }
 
 
@@ -60,26 +60,26 @@ a:hover, .pro-inner-item:hover, .pro-inner-item:focus {
 /* Login/Signup Styling Start */
 
 .container {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin: 4vw;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 4vw;
 }
 
 .form-input {
-    display: flex;
-    flex-direction: column;
-    margin: 2vw;
-    padding: .5vw;
-    border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  margin: 2vw;
+  padding: .5vw;
+  border-radius: 4px;
 }
 
 .border-red {
-    border: 1px solid red;
+  border: 1px solid red;
 }
 
 .border-blue {
-    border: 1px solid blue;
+  border: 1px solid blue;
 }
 
 
@@ -89,60 +89,60 @@ a:hover, .pro-inner-item:hover, .pro-inner-item:focus {
 /* Nav/Header Styling Start */
 
 .gradient-text {
-  background-image: linear-gradient(180deg, #E21143, #FFB03A);
-  background-clip: text;
-  color: transparent;
+background-image: linear-gradient(180deg, #E21143, #FFB03A);
+background-clip: text;
+color: transparent;
 }
 
 .heading {
-  font-size: 5vw;
-  padding-right: 5vw;
+font-size: 5vw;
+padding-right: 5vw;
 }
 
 .nav-item {
-  text-decoration: none;
-  font-size: 1.8vw;
-  color: black;
-  cursor: pointer;
+text-decoration: none;
+font-size: 1.8vw;
+color: black;
+cursor: pointer;
 }
 
 .nav-block {
-  display: flex;
-  justify-content: flex-start;
-  top: 0;
-  width: 100%;
-  z-index: 200;
-  margin-left: 2vw;
+display: flex;
+justify-content: flex-start;
+top: 0;
+width: 100%;
+z-index: 200;
+margin-left: 2vw;
 }
 
 .nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 22vw;
-  margin: 0 1.5vw 0 1.5vw;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding-left: 22vw;
+margin: 0 1.5vw 0 1.5vw;
 }
 
 .nav-ul {
-  display: flex;
-  list-style: none;
-  font-style: none;
-  margin-left: 7vw;
+display: flex;
+list-style: none;
+font-style: none;
+margin-left: 7vw;
 }
 
 .nav-li {
-  padding-right: 3vw;
-  
+padding-right: 3vw;
+
 }
 
 .user-profile {
-  text-decoration: none;
-  font-size: 1.8vw;
-  color: black;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  margin-left: 17vw;
+text-decoration: none;
+font-size: 1.8vw;
+color: black;
+cursor: pointer;
+display: flex;
+align-items: center;
+margin-left: 17vw;
 }
 
 /* Nav/Header Styling End */
@@ -151,7 +151,7 @@ a:hover, .pro-inner-item:hover, .pro-inner-item:focus {
 /* Homepage Styling Start */
 
 .home-container {
-  display: flex;
+display: flex;
 }
 
 /* Homepage Styling End */
@@ -160,7 +160,7 @@ a:hover, .pro-inner-item:hover, .pro-inner-item:focus {
 /* Browse Page Styling Start */
 
 .browse-container {
-  display: flex;
+display: flex;
 }
 
 /* Browse Page Styling End */
@@ -169,9 +169,9 @@ a:hover, .pro-inner-item:hover, .pro-inner-item:focus {
 /* Profile Styling Start */
 
 .profile-containers {
-  position: relative;
-  width: auto;
-  margin-left: 250px;
+position: relative;
+width: auto;
+margin-left: 250px;
 }
 
 .profile-headers {
@@ -184,19 +184,19 @@ margin-bottom: 80px;
 /* Post Listing Styling Start */
 
 .post-container {
-  display: flex;
+display: flex;
 }
 
 .title-label {
-    position: relative !important;
-    top: -40px !important;
-    right: -100px !important;
+  position: relative !important;
+  top: -40px !important;
+  right: -100px !important;
 }
 
 .description-label {
-    position: relative !important;
-    top: -50px !important;
-    right: -100px !important;
+  position: relative !important;
+  top: -50px !important;
+  right: -100px !important;
 }
 
 /* Post Listing Styling End */
@@ -205,18 +205,18 @@ margin-bottom: 80px;
 /* Footer Styling Start */
 
 .footer {
-    margin-top: 60px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: auto;
-    padding: 10px 0 10px 0;
-    display: flex;
-    justify-content: end;
+  margin-top: 60px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  padding: 10px 0 10px 0;
+  display: flex;
+  justify-content: end;
 }
 
 .footer-text {
-    font-size: 1vw;
+  font-size: 1vw;
 }
 
 /* Footer Styling End */

@@ -6,6 +6,7 @@ import ReviewList from './profile/reviewList';
 import Settings from './profile/Settings';
 import RegisterLogin from '../RegisterLogin';
 
+
 const Profile = () => {
 
     const [currentPage, setCurrentPage] = React.useState('profile');
@@ -42,8 +43,3 @@ const Profile = () => {
 export default Profile;
 
 
-
-
-//persons profile will have their list of products that they have posted and sold
-//"past sales" and "current posts"
-//header will just be username and then the body will just be their products & reviews
