@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-const reviewSchema = require('./Review').schema;
+
 
 const productSchema = new Schema(
     {
@@ -24,9 +24,7 @@ const productSchema = new Schema(
         username: {
             type: String,
             required: true
-        },
-        reviews: [reviewSchema],
-        categories: [{ type: String }]
+        }
     },
     {
         toJSON: {
