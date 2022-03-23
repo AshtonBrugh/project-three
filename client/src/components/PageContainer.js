@@ -38,9 +38,6 @@ export default function PageContainer() {
                 </>
             </Router>
             <div className="spacer"></div>
-            <span>
-                Logged In: {AuthService.loggedIn().toString()}
-            </span>
             <Footer />
         </>
     );
