@@ -14,8 +14,13 @@ import Test from "./dev/test";
 export default function PageContainer() {
 
     const [currentPage, setCurrentPage] = React.useState('Home');
-    const handlePageChange = (page) => setCurrentPage(page);
-
+    const handlePageChange = (page) => {
+        if (page.toLowerCaseString().includes('home') || page.toLowerCaseString().includes('/' || AuthService.checkLogin())) {
+            setCurrentPage(page)
+        } else {
+            setCurrentPage('login');
+        }
+    }
     return (
         <>
             <Router>
@@ -25,14 +30,13 @@ export default function PageContainer() {
                         <Route path='/' element={<Browse />} />
                         <Route path='/login' element={<RegisterLogin />} />
                         <Route path='/home' element={<Browse />} />
-                        <Route path='/profile' element={<Profile />} />
-                        <Route path='/item/:id' element={<SingleProduct />} />
-                        <Route path='/profile/activelistings' element={<Profile />} />
-                        <Route path='/profile/activeoffers' element={<Profile />} />
-                        <Route path='/profile/reviewlist' element={<Profile />} />
-                        <Route path='/profile/settings' element={<Profile />} />
-                        <Route path='/post' element={<Post />} />
-                        <Route path='/dev' element={(<Test />)} />
+                        <Route path='/profile' element={(!AuthService.checkLogin()) ? <RegisterLogin /> : <Profile />} />
+                        <Route path='/item/:id' element={(!AuthService.checkLogin()) ? <RegisterLogin /> : <SingleProduct />} />
+                        <Route path='/profile/activelistings' element={(!AuthService.checkLogin()) ? <RegisterLogin /> : <Profile />} />
+                        <Route path='/profile/activeoffers' element={(!AuthService.checkLogin()) ? <RegisterLogin /> : <Profile />} />
+                        <Route path='/profile/reviewlist' element={(!AuthService.checkLogin()) ? <RegisterLogin /> : <Profile />} />
+                        <Route path='/profile/settings' element={(!AuthService.checkLogin()) ? <RegisterLogin /> : <Profile />} />
+                        <Route path='/post' element={(!AuthService.checkLogin()) ? <RegisterLogin /> : <Post />} />
                         <Route render={() => { return (<h1 className='display-2'>Wrong page!</h1>) }} />
                     </Routes>
                 </>
