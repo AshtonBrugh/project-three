@@ -94,7 +94,7 @@ const SingleProduct = () => {
 
         const active = (Date.now() > salestart && Date.now() < saleend);
         const expiredStatus = !(saleend - (new Date()) > 0);
-        const activeStatusClassName = ((active) ? "auction-active" : "auction-expired disabled");
+        const activeStatusClassName = ((active) ? "auction-active" : "auction-expired");
 
         let intUntilStart;
         if (!expiredStatus && !active) {
@@ -161,7 +161,7 @@ const SingleProduct = () => {
                                 <h6 className="card-title end-0 top-0 position-absolute p-2 text-success">${product.currentbid.toFixed(2)} USD</h6>
                                 <p className="card-text">{product.description}</p>
                                 <a href="#" data-toggle="modal" data-target="#confirmModal"
-                                    className="btn btn-warning border-2 border-danger text-danger fw-bold position-absolute bottom-0 end-0 translate-middle " >
+                                    className={`btn btn-warning border-2 border-danger text-danger fw-bold position-absolute bottom-0 end-0 translate-middle${(expiredStatus) ? ' disabled' : ''}`} >
                                     {
                                         (
                                             (active) ?

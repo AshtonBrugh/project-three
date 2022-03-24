@@ -1,4 +1,4 @@
-# Project-Three Five Fires
+# Project-Three FiveFires
 
  ## Table of Contents
   * [Application Description](#application-description)
@@ -11,10 +11,10 @@
 
 ## Application Description
 This application is an auction style website where users can sign-up/login and either post their goods or bid to purchase other users' goods. 
-There is also a review system of users using a five-scale rating, also known as "five fires".
+There is also a review system of users using a five-scale rating, also known as "Five Fires".
 
 ## Application Installation
-To install, clone the respository onto your local computer and run npm install in the root directory. 
+To install, clone the respository onto your local computer, run `npm install` in the root directory, then run `npm run develop`. 
 
 ## Application Built With
 • React.js <br>
@@ -28,17 +28,17 @@ To install, clone the respository onto your local computer and run npm install i
 • JSON Web Token <br>
 • Nodemon
 
-## Deployed Application
+## Application
+[GitHub: Code](https://github.com/AshtonBrugh/project-three) <br/>
+[Heroku: Deployment](https://immense-fortress-45339.herokuapp.com/)
 
 ## Screenshot
 
+<img src="./Assets/FIVEFIRES.PNG" alt="FiveFires screenshot"/>
+
 ## Collaborators
-• Scott Howell <br>
-github: https://github.com/CyanideTheJuggla <br>
-• Tre Rush <br>
-github: https://github.com/Rush0218 <br>
-• David Siedlarz <br>
-github: https://github.com/DSiedlarz90 <br>
-• Ashton Brugh <br>
-github: https://github.com/AshtonBrugh 
+• [Scott Howell](https://github.com/CyanideTheJuggla) <br>
+• [Tre Rush](https://github.com/Rush0218) <br>
+• [David Siedlarz](https://github.com/DSiedlarz90) <br>
+• [Ashton Brugh](https://github.com/AshtonBrugh) 
 
