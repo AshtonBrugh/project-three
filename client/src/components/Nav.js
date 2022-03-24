@@ -2,6 +2,7 @@ import React from "react";
 import { useQuery } from "@apollo/client";
 import { QUERY_ME } from "../utils/queries";
 import AuthService from '../utils/auth'
+const logo192 = require('../icons/logo192.png');
 
 function Nav({ currentPage, handlePageChange }) {
 
@@ -10,7 +11,7 @@ function Nav({ currentPage, handlePageChange }) {
     return (
         <header className="nav-block gradient-text">
             <a href="/" onClick={() => handlePageChange('home')} className='nav-item'>
-                <h1 className="gradient-text heading">FiveFires</h1>
+                <h1 className="gradient-text heading"><img src={logo192} className="logoImg" /> FiveFires</h1>
             </a>
             <nav className='nav'>
                 <ul className="nav-ul">

@@ -19,6 +19,16 @@ body {
   background-attachment: fixed;
 }
 
+.logoImg {
+    height: 10vw;
+    width: auto;
+    padding-bottom: 1.3vw;
+    left: 6.5vw;
+    position: absolute;
+    top: -1vw;
+    z-index: -1;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -95,8 +105,9 @@ a:hover, .pro-inner-item:hover, .pro-inner-item:focus {
 }
 
 .heading {
-  font-size: 5vw;
-  padding-right: 5vw;
+    font-size: 5vw;
+    padding-right: 5vw;
+    margin-top: 2.5vw;
 }
 
 .nav-item {
