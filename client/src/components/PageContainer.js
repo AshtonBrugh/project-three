@@ -9,7 +9,6 @@ import Browse from "./pages/Browse";
 import Profile from "./pages/Profile";
 import Post from "./pages/Post";
 import SingleProduct from "./pages/SingleProduct";
-import Test from "./dev/test";
 
 export default function PageContainer() {
 
