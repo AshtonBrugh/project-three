@@ -4,7 +4,7 @@
     "description": "",
     "main": "server/server.js",
     "scripts": {
-        "start": "node server/server.js",
+        "start": "npm i && npm run build && npm run develop",
         "heroku-postbuild": "npm run install-client && npm run build",
         "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
         "install": "cd server && npm i && cd ../client && npm i",
