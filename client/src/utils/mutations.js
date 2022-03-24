@@ -44,14 +44,16 @@ export const QUERY_ADD_PRODUCT = gql`
             title
             description
             image
-            userid
+            seller {
+                _id
+                username
+            }
             postdate
             salestart
             salelength
             startingprice
             reviews
             categories
-            username
             checkactive
         }
     }
@@ -83,7 +85,6 @@ export const UPDATE_CURRENT_BID = gql`
             startingprice
             categories
             currentbid
-            currentbid_userid
         }
     }
 `;

@@ -94,13 +94,14 @@ const resolvers = {
             throw new AuthenticationError('You need to be logged in!');
         },
         update_current_bid: async (parent, { productid, currentbid }, context) => {
-            //console.log('context.user', context.user)
+            console.log('context.user', context.user)
             if (context.user) {
                 const updateProduct = await Product.findOneAndUpdate(
                     { _id: productid },
                     { currentbid, currentbid_userid: context.user._id },
                     { new: true, runValidators: true }
                 );
+                console.log('resolvers.js-update_current_bid -> updatedProduct', updateProduct);
                 return updateProduct;
             } else throw new AuthenticationError('You need to be logged in!');
         }
